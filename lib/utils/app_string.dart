@@ -21,6 +21,7 @@ class AppString{
           "Artificial Intelligence"
         ]
     ];
+
   }
   static List<Map<String, String>> allCourseContentDetailsList(String courseName){
     return [
