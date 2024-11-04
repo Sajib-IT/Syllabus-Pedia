@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000561794018",
+    "project_id": "syllabus-pedia-dd7ba",
+    "storage_bucket": "syllabus-pedia-dd7ba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000561794018:android:7b9353e6b8ab2a1d5077bb",
+        "android_client_info": {
+          "package_name": "com.ict.syllabus_pedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM7KSiyJMMuBVzRIYf5AL03z5qsk98orA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
