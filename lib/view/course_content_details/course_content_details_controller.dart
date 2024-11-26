@@ -4,6 +4,7 @@ import 'package:syllabus_pedia/utils/app_string.dart';
 class CourseContentDetailsController extends GetxController {
   List<Map<String, String>> allCourseContentDetailsList = [];
   String courseName = "";
+  RxString selectedText = RxString("");
   @override
   void onInit() {
     if (Get.arguments != null) {

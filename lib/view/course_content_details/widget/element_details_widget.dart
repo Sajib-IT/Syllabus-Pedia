@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:syllabus_pedia/view/course_content_details/course_content_details_controller.dart';
 
 class ElementDetailsWidget extends StatelessWidget {
+  final CourseContentDetailsController _controller = Get.find();
   final MapEntry<String, String> element;
-  const ElementDetailsWidget({super.key, required this.element});
+  ElementDetailsWidget({super.key, required this.element});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +17,13 @@ class ElementDetailsWidget extends StatelessWidget {
           SelectableText(
             "${element.key} :",
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
+            onSelectionChanged: (textSelection, cause) {
+              final select = element.key
+                  .substring(textSelection.start, textSelection.end);
+              print(select);
+              _controller.selectedText.value = select;
+            },
+              toolbarOptions: ToolbarOptions()
           ),
           const SizedBox(height: 8),
           SelectableText(
@@ -23,6 +33,7 @@ class ElementDetailsWidget extends StatelessWidget {
               final select = element.value
                   .substring(textSelection.start, textSelection.end);
               print(select);
+              _controller.selectedText.value = select;
             },
             toolbarOptions: ToolbarOptions(),
           ),

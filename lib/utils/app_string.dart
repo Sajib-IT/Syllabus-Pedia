@@ -84,7 +84,21 @@ class AppString {
           "History and Evolution of Mobile Radio Communication":
               "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
           "Radio Paging":
-              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture"
+              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
+          "History and Evolution of Mobile Radio Communications":
+          "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
+          "Radio Pagings":
+          "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
+          "History and Evolution of Mobile Radio Communicationa":
+          "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
+          "Radio Paginga":
+          "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
+          "History and Evolution of Mobile Radio Communicationd":
+          "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
+          "Radio Pagingd":
+          "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
+
+
         },
       if (courseName == "Optical Communication")
         {
