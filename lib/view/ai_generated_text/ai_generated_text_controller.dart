@@ -1,11 +1,12 @@
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:syllabus_pedia/config/api-key.dart';
 
 class AiGeneratedTextController extends GetxController {
   String selectedText = '';
   RxString aiResponseText = RxString('');
-  String apiKey = 'AIzaSyB2lcIqz1REvzoyDeit_F52oozjAc7yp1w';
+  String apiKey = api_key;
   @override
   void onInit() {
     if (Get.arguments != null) {
