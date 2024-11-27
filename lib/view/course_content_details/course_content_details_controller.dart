@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:syllabus_pedia/utils/app_string.dart';
 
@@ -9,7 +10,9 @@ class CourseContentDetailsController extends GetxController {
   void onInit() {
     if (Get.arguments != null) {
       courseName = Get.arguments;
-      print(courseName);
+      if (kDebugMode) {
+        print(courseName);
+      }
       initializeCourseContentDetailsList();
     }
     super.onInit();
@@ -18,5 +21,13 @@ class CourseContentDetailsController extends GetxController {
   void initializeCourseContentDetailsList() {
     allCourseContentDetailsList =
         AppString.allCourseContentDetailsList(courseName);
+  }
+
+  bool checkValidation(){
+    if(selectedText.value.isNotEmpty &&
+        selectedText.value.length > 10){
+      return true;
+    }
+    return false;
   }
 }

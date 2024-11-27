@@ -1,6 +1,7 @@
 class AppString {
   static const String serverError =
       'There could be a problem either with the network or during the server request. Please try again.';
+  static const String selectionAlert = "Please select any meaningful portion.";
 
   static List<List<String>> allCourseNameList(String semesterName) {
     return [

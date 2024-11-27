@@ -72,7 +72,7 @@ class MyTextField extends StatelessWidget {
             color: Colors.grey, fontWeight: FontWeight.w400, fontSize: 14),
         hintText: hintText,
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.redAccent),
+          borderSide: BorderSide(color: Colors.lightBlueAccent),
           borderRadius: BorderRadius.all(
             Radius.circular(8.0),
           ),
