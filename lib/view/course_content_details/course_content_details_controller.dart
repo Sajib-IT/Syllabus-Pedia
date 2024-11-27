@@ -25,7 +25,7 @@ class CourseContentDetailsController extends GetxController {
 
   bool checkValidation(){
     if(selectedText.value.isNotEmpty &&
-        selectedText.value.length > 10){
+        selectedText.value.length > 5){
       return true;
     }
     return false;
