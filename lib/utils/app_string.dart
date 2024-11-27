@@ -406,156 +406,351 @@ class AppString {
           "Marginal & Relevant costing":
               "Marginal costing tools and techniques, cost-volume-profit analysis. Guidelines for decision making."
         },
-      if (courseName == "Data Mining") {
-        "Data Mining": "Definitions; KDD (Knowledge Discovery Database) versus Data Mining; DBMS versus Data Mining, Data Mining Techniques; Issues and challenges; Applications of Data Warehousing & Data mining in Government.",
-        "Association Rules": "A priori algorithm, Partition algorithm, Dynamic inset counting algorithm, FP-tree growth algorithm; Generalized association rule.",
-        "Clustering Techniques": "Clustering paradigm, Partition algorithms, CLARA, CLARANS; Hierarchical clustering, DBSCAN, BIRCH, CURE; Categorical clustering, STIRR, ROCK, CACTUS.",
-        "Decision Trees": "Tree construction principle, Best split, Splitting indices, Splitting criteria, Decision tree construction with presorting.",
-        "Web Mining": "Web content Mining, Web structure Mining, Web usage Mining, Text Mining.",
-        "Temporal and Spatial Data Mining": "Basic concepts of temporal data Mining, The GSP algorithm, SPADE, SPIRIT, WUM."
-      },
-
-
-
-      if (courseName == "Analog and Digital Communication") {
-        "Radio Wave Propagation": "Surface and space wave propagation, Sky wave through Ionosphere. Pulse method for measuring height and electron concentration of Ionospheric region; Chapman theory of layer formation, Ionospheric storm.",
-        "Modulation and Demodulation": "Linear modulation - AM, SSB, DSB, and SSB generation, PLL Circuit to generate linear modulated signals, low and high power modulators, Exponential modulation- FM and PM, demodulation of AM, FM.",
-        "Broadcasting Transmitter": "Transmitter classification, Elements of transmitter, AM and FM transmitters, SSB transmitter, stabilized master oscillator, Frequency multipliers, Mixer circuits, RF power amplifier, Preemphasis circuits, Transmitter performance-carrier frequency requirements, audio frequency response, distortion, and signal to distortion ratio.",
-        "Radio Receiver": "Receiver classification, Elements of receiver, AM and FM receivers, SSB receiver, Comparison of AM and FM receivers, Noise in receiver, AGC circuits, AFC circuits, Noise limiters, Receiver sensitivity, Cross modulation, Spurious responses.",
-        "Representation of Random Signals and Noise in Communication System": "Signal Power and Spectral Representations, White noise, Thermal noise, PSDF of White Signals. Input and Output Relationship for Random Signals and Noise Passed Through a Linear Time Invariant System, Band Limited White Noise, ARC Filtering of White Noise.",
-        "Noise performance of Analog Communication Systems": "Signal-to-Noise Ratio in Linear Modulation, Synchronous Detection of DSB. Signal-to-Noise Ratio for AM and SSB, FM, Effect of Noise in Envelope and Square Law Detection of AM, Threshold Effects in Nonlinear Detectors.",
-        "Elements of Digital Communication Systems": "Model of Digital Communication Systems, Digital Representation of Analog Signal, Certain issues in Digital Transmission, Advantages of Digital Communication Systems, Bandwidth-S/N tradeoff, Hartley Shannon Law.",
-        "Pulse Code Modulation": "PCM Generation and Reconstruction, Quantization noise, Non uniform Quantization and Companding, DPCM, Adaptive DPCM, DM and Adaptive DM. Noise in PCM and DM.",
-        "Digital Modulation Techniques": "ASK, ASK Modulator, Coherent ASK Detector, Non-Coherent ASK Detector, FSK, Bandwidth and Frequency Spectrum of FSK. Non coherent FSK Detector, Coherent FSK Detector, FSK Detection Using PLL, BPSK, Coherent PSK Detection, QPSK, Differential PSK.",
-        "Line Coding": "Techniques and Analysis."
-      },
-
-
-
-      if (courseName == "Microprocessor and Assembly Language") {
-        "Introductory Concept": "Evaluation of microprocessor, Types of microprocessor, system bus, hardware of a microprocessor, memory-addressing technique.",
-        "8086 Microprocessor": "Properties, architecture, registers, FLAGS register, physical address calculation, addressing modes, Instruction set, Instruction format, Fetch-decode-Execution cycle, interrupt, Types of interrupt, handling interrupt request, interrupt vector and table.",
-        "Advanced Microprocessors": "Intel 80286 architecture, 80286-memory management, Protection; Intel 80386 functional diagram; 386 programming model; 80386 modes; Multi programming, 80486 and Pentium microprocessor.",
-        "I/O operation": "Isolated and memory mapped I/O, DMA technique, I/O ports, I/O processor.",
-        "Assembly Language": "Hardware of Microprocessor, Registers, assembler, Assembly language syntax, variables, Directives, Basic Instructions and their formats, The FLAG register, JMP, LOOP, CMP instructions, Conditional jump instruction, programming with high level structure.",
-        "Logic instructions": "Logic instructions, Shift instructions, Rotate instruction, the stack and stack related instructions, Procedure and procedure related instructions, Multiplication and Division instructions-MUL, IMUL, DIV, IDIV, CBW, CWD, arrays, addressing modes, XLAT instructions.",
-        "String instructions": "String instructions, Macro definition, Parameters in Macro, Macro directives, Nested macros, Interrupt, Interrupt vector and routine, Bios Interrupt, Dos Interrupt, The IN, OUT, INS and OUTS instructions."
-      },
-
-
-
-
-      if (courseName == "Theory of Computation") {
-        "Finite automata": "Deterministic finite automata (DFA). Non-deterministic finite automata (NDFA). Equivalence and conversion of DFA and NDFA. Pushdown automata.",
-        "Context free languages": "Context free grammars, push down automata; context free languages.",
-        "Turing machines": "Basic machines. Configuration. Computing with Turing machines. Combining, Turing machines."
-      },
-
-
-
-      if (courseName == "Operating Systems") {
-        "Principle of operating systems and Operating system structure": "Definition of operating system, Different kinds of operating systems (Desktop, Multiprocessor, Distributed, Clustered, Real time, Hand held systems), Operating-System Services, User Operating-System Interface, System Calls, Types of System Calls, System Programs, Operating-System Design and Implementation, Operating-System Structure, Virtual Machines.",
-        "Concurrency control, Recovery System and Distribute databases": "Lock-Based Protocols, Granting of locks, Two-phase locking protocol, Graph based protocol, Tree protocol, Timestamp based protocols, Deadlock detection and recovery. Failure classification, Storage types, Checkpoints. Distributed data, Replication and Fragmentation.",
-        "Multiprocessing and time sharing, Process coordination, Deadlocks": "Multiple-Processor Scheduling, Thread Scheduling, Algorithm Evaluation, Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Recovery From Deadlock. Control and scheduling of large information processing systems, Resource allocation; Dispatching; Processor access methods; Job control languages.",
-        "Memory Organization": "Introduction, Characteristics of memory systems, Main memory design, Memory hierarchy, Cache memory, Virtual memory and memory management concepts.",
-        "Memory management": "Background, Swapping, Contiguous Memory Allocation, Paging, Structure of the Page Table, Segmentation, Demand Paging, Page Replacement, Thrashing, Demand Paging, Page Replacement.",
-        "File systems": "File Concept, Access Methods, Directory Structure, File-System Mounting, File Sharing, File-System Implementation, Directory Implementation, Allocation Methods.",
-        "Protection and security": "Protection, Principles of Protection, Domain of Protection, Access Matrix, Access Control, Revocation of Access Rights, The Security Problem, Program Threats, System and Network Threats, Cryptography as a Security Tool, User Authentication, Implementing Security Defenses, Fire walling to Protect Systems and Networks.",
-        "Advanced topics": "Distributed operating system, distributed file system, synchronization, real time systems, multimedia operating system."
-      },
-
-
-
-      if (courseName == "Microwave Engineering") {
-        "Microstrips": "Structures and characteristics.",
-        "Rectangular Resonant Cavities": "Energy storage, losses. impedance transformer, filters, isolator.",
-        "Microwave Devices": "Semiconductor Microwave devices, Transit time effect velocity Modulation, Microwave amplifier and oscillator; Klystron (Multicavity and reflex), Magnetron, TWT, other microwave tubes.",
-        "Antennas": "Small current element, radiation resistance, radiation pattern and properties, Hertzian and half wave dipoles, Mono pole, horn, rhombic and parabolic reflector, array, and Yagi- Uda antenna.",
-        "Radar and Electronic Navigation Systems": "Radar principles; Civil, military and weather applications, Radar equation, Transmitters and radiators, Factor influencing maximum range; Moving target indicator(MTI), Tracking Radar system and search systems; Electronic navigation systems, LORAN, ILS, SONAR.",
-        "Modern Trends in Microwaves Engineering": "Effect of Microwaves on human body, Medical and Civil applications of microwaves, Electromagnetic interference / Electromagnetic Compatibility (EMI / EMC), Monolithic Microwave IC fabrication, RFMEMS for microwave components, Microwave Imaging."
-      },
-
-
-      if (courseName == "Compiler Design") {
-        "Compiler Design Principles and Techniques": "Introduction; A simple syntax-directed translator; Lexical analysis; Syntax analysis; Syntax directed translation; Intermediate code generation; Run-time environments; Code generation; Machine-Independent optimizations; Instruction level parallelism; Optimizing for parallelism and locality; Interprocedural analysis, etc.",
-        "Tools for Programming, Parser Generation, Debugging and Testing in Linux": "Programming tools: the GNU compiler tool chain, building software with GNU make, building and using libraries, coverage testing with GNU gcov, profiling with GNU gprof, building packages with automake/autoconf, etc.; parser generation with flex and bison; Debugging and Testing: software unit testing frameworks, debugging with GDB, code hardening, etc."
-      },
-
-
-
-      if (courseName == "Computer Peripheral and Interfacing") {
-        "Input devices": "Keyboard; Key switching mechanism and coding techniques; Static encoder; Lockout and rollover; Scanning encoder; Keyboard without key.",
-        "Modern data-entry devices": "Scanners overview; Bar code reader; Optical mark reader (OMR); Optical Character Reader (OCR); Digitizer: Reading technique, Capacitive Electrostatic scanning digitizer.",
-        "Display devices": "CRT; Basic CRT operations; Timing and frequencies; CRT controller ICs; LCDs; LCD technologies; Passive and active matrix; Guest-host techniques; Twisted-pneumatic LCDs; LCD reliability; Electroluminescent display.",
-        "Printers": "Impact printers; Dot matrix printer, needle principal; Laser printing; Ink-Jet printing; Color printing; Plotters.",
-        "Storage devices": "Floppy disk; Floppy disk controller; Position control with stepping actuators; Magnetic hard disk and controller; Compact disk.",
-        "Introductory Concept of Interfacing": "I/O interface, memory interface, interfacing components and their characteristics.",
-        "Serial and parallel Interface": "Characteristics of memory and I/O interface, Synchronous and asynchronous communication, Serial I/O interface, RS232, 8251A communication interface, RS-232 interface, 8155A Programmable peripheral Interface, Parallel adapter, parallel port.",
-        "Interfacing components": "8284A Programmable timer, Bus architecture, Bus Timing, Bus Controller, analog and digital interface, Interrupt sources, types of interrupt, 8259A priority interrupt controller, Daisy chain.",
-        "I/O Controller": "8237A DMA Controller, Floppy and Hard disk Controller.",
-        "Embedded System": "Introduction to Embedded system, The Embedded Design Life Cycle, Models of Computation, State Charts, General language Characteristics (SDL, Petri nets, Message Sequence Charts, UML, JAVA, HDL), Embedded System Hardware, (Input, Communication, Processing Unit, Memories, output) Embedded operating systems, middleware & Scheduling, Implementing, ASIC, Embedded Systems Hardware/Software co-design."
-      },
-
-
-
-      if (courseName == "Computer Networks") {
-        "Introduction": "Computer networks, Types of Computer networks, Network Topology, Circuit Switching and Packet Switching, protocol and protocol hierarchies, The OSI reference model, TCP/IP protocol suit.",
-        "Physical Layer and Media": "Guided transmission media, wireless transmission, radio waves, microwaves, infrared, Bluetooth; satellites communication etc.",
-        "The Network layer": "Network layer design issues: IP addressing, IP packet forwarding, Sub-netting, CIDR, Internet Protocol, ICMP, ARP, RARP, DHCP, and IPv6 overview, Address mapping, Error reporting and multicasting; Delivery, Forwarding, and Routing algorithms, Congestion control algorithms.",
-        "The Transport layer": "The transport service, Elements of transport protocols, simple transport protocols, User datagram protocol (UDP) – UDP operations and UDP package modules, Transmission control protocol (TCP) – TCP features, TCP Connection establishment and termination, TCP Flow control and error control, Congestion control.",
-        "The Application layer": "The Domain Name System, Electronic Mail, Network Management: SNMP, World Wide Web, HTTP, Multimedia etc.",
-        "Multiplexing, Spreading and switching": "Multiplexing – FDM, WDM, TDM (Synchronous and statistical) spread spectrum FHSS & DSSS, Circuit Switching, Packet Switching, Message Switching, Routing Algorithms, Virtual Circuit and Datagram, Congestion Control Algorithms, Quality of Service, Internetworking, Internetworking Devices etc.",
-        "Error-Recovery and Link-Control": "Data link layer and control, Error detection and correction, framing, flow and error control, Stop-and-Wait protocol, Automatic Repeat Request (ARQ), Go-Back-N, Selective Repeat, HDLC, PPP.",
-        "Multiple Access": "Random Access; ALOHA, CSMA, CSMA/CD, CSMA/CA, Channelized Access; CDMA, TDMA, FDMA, Controlled Access; Reservation, Poling, Token Passing. Ethernet, Wireless LANs, and Bluetooth.",
-        "Network Layer Protocols": "Address Resolution Protocol, Internet Protocol, Internet Control Message Protocol, IPV6, Routing Information Protocol, Open Shortest Path First, Border Gateway Protocol, User Datagram Protocol, Transmission Control Protocol."
-      },
-
-
-      if (courseName == "Software Engineering") {
-        "Software Engineering Paradigms": "Definition of S/W Eng.; The classical life cycle; prototyping fourth generation technique; The product and the process, measurement, matrices.",
-        "Software Project Planning": "Project planning objectives; S/W slope; Resources; Metrics for S/W productivity and quality; S/W project estimation; Decomposition techniques; Empirical Estimation Models; Automated Estimation tools; S/W project scheduling.",
-        "Requirements Analysis Fundamentals": "Analysis principle; Software Prototyping Specification; Requirement Analysis Methodologies; Structured and object oriented analysis; Data Flow-oriented Analysis methods.",
-        "Software Design Fundamentals": "Design process; Design fundamentals: S/W architecture, program structure, Data structure, S/W procedure, Modularity, abstraction; Effective modular design; Procedural design; Data flow-oriented Design; Top-down and bottom-up design; Design Process considerations; Transform analysis; Transaction analysis; Data structure-oriented design: Logical construction of programs and systems, Data structured systems development; object-oriented design; Design concepts; Methods; strategy. Real-time Design; coding style: Code documentation, Data declaration, statement construction, Input/output.",
-        "Software reliability and availability models": "Software quality factors; software review; software quality metrics; Software reliability; Software quality assurance approach.",
-        "Software Testing Techniques": "Testing fundamentals; White box testing; Basis path testing; Loop testing; Black Box testing.",
-        "Software Testing Strategies": "Verification and validation; Organization for software testing; Unit testing; Integration testing; Validation testing; System testing; The art of debugging.",
-        "Software Maintenance and configuration management": "Definition; Maintenance Characteristics; Maintainability; Maintenance tasks; Software configuration management."
-      },
-
-
-
-      if (courseName == "Bio-Informatics") {
-        "Introductory Concept": "Basics of Biology, Molecular Biology and Bioinformatics, The central Dogma, DNA, transcription, Translation, Genomics, Amino acids, Proteomics and Genomics, Human Computer Interaction and Bioinformatics.",
-        "Genome Analysis and Gene Mapping": "Genome analysis, genome mapping, sequence Alignment, pair wise sequence alignment, Multiple sequence alignment, local and global alignment, sequence alignment techniques: dot matrix, dynamic algorithms, Popular algorithms: Needleman and Wunsch, Smith-Waterman, Scoring methods: PAM, BLOSUM, Phylogenetic analysis. Tools for similarity search, BLAST, Phi-BLAST, Psi-BLAST, FASTA.",
-        "Classification and Analysis of Protein": "Overview of protein structure, protein structure Database, Data Capture, capturing micro array data, protein structure visualization tools, protein structure alignment, protein classification approaches, Alpha and beta structure analysis, structure comparison, protein structure analysis and prediction, motif, profiles, patterns and fingerprint search, protein evolution, Methods of 2D structure prediction, 2-D Gel Electrophoresis, 2-D Gel Electrophoresis image analysis, tools: CAROL, PiKA, Z3, PDQuest.",
-        "Multiple sequence alignment, Functional annotation of sequences, Gene Identification and Prediction": "Gene Expression and Microarray, Hidden Markov Model, Navigation the NCBI web site. Genbank, EMBL, OMIM, Pubmed, Navigation other genome database sites (Ensembl, Celera).",
-        "Bionic Arm": "Introduction of bionic devices, working principle of bionic arm, first bionic man and woman, prospect of bionic devices, latest bionic components."
-      },
-
-
+      if (courseName == "Data Mining")
+        {
+          "Data Mining":
+              "Definitions; KDD (Knowledge Discovery Database) versus Data Mining; DBMS versus Data Mining, Data Mining Techniques; Issues and challenges; Applications of Data Warehousing & Data mining in Government.",
+          "Association Rules":
+              "A priori algorithm, Partition algorithm, Dynamic inset counting algorithm, FP-tree growth algorithm; Generalized association rule.",
+          "Clustering Techniques":
+              "Clustering paradigm, Partition algorithms, CLARA, CLARANS; Hierarchical clustering, DBSCAN, BIRCH, CURE; Categorical clustering, STIRR, ROCK, CACTUS.",
+          "Decision Trees":
+              "Tree construction principle, Best split, Splitting indices, Splitting criteria, Decision tree construction with presorting.",
+          "Web Mining":
+              "Web content Mining, Web structure Mining, Web usage Mining, Text Mining.",
+          "Temporal and Spatial Data Mining":
+              "Basic concepts of temporal data Mining, The GSP algorithm, SPADE, SPIRIT, WUM."
+        },
+      if (courseName == "Analog and Digital Communication")
+        {
+          "Radio Wave Propagation":
+              "Surface and space wave propagation, Sky wave through Ionosphere. Pulse method for measuring height and electron concentration of Ionospheric region; Chapman theory of layer formation, Ionospheric storm.",
+          "Modulation and Demodulation":
+              "Linear modulation - AM, SSB, DSB, and SSB generation, PLL Circuit to generate linear modulated signals, low and high power modulators, Exponential modulation- FM and PM, demodulation of AM, FM.",
+          "Broadcasting Transmitter":
+              "Transmitter classification, Elements of transmitter, AM and FM transmitters, SSB transmitter, stabilized master oscillator, Frequency multipliers, Mixer circuits, RF power amplifier, Preemphasis circuits, Transmitter performance-carrier frequency requirements, audio frequency response, distortion, and signal to distortion ratio.",
+          "Radio Receiver":
+              "Receiver classification, Elements of receiver, AM and FM receivers, SSB receiver, Comparison of AM and FM receivers, Noise in receiver, AGC circuits, AFC circuits, Noise limiters, Receiver sensitivity, Cross modulation, Spurious responses.",
+          "Representation of Random Signals and Noise in Communication System":
+              "Signal Power and Spectral Representations, White noise, Thermal noise, PSDF of White Signals. Input and Output Relationship for Random Signals and Noise Passed Through a Linear Time Invariant System, Band Limited White Noise, ARC Filtering of White Noise.",
+          "Noise performance of Analog Communication Systems":
+              "Signal-to-Noise Ratio in Linear Modulation, Synchronous Detection of DSB. Signal-to-Noise Ratio for AM and SSB, FM, Effect of Noise in Envelope and Square Law Detection of AM, Threshold Effects in Nonlinear Detectors.",
+          "Elements of Digital Communication Systems":
+              "Model of Digital Communication Systems, Digital Representation of Analog Signal, Certain issues in Digital Transmission, Advantages of Digital Communication Systems, Bandwidth-S/N tradeoff, Hartley Shannon Law.",
+          "Pulse Code Modulation":
+              "PCM Generation and Reconstruction, Quantization noise, Non uniform Quantization and Companding, DPCM, Adaptive DPCM, DM and Adaptive DM. Noise in PCM and DM.",
+          "Digital Modulation Techniques":
+              "ASK, ASK Modulator, Coherent ASK Detector, Non-Coherent ASK Detector, FSK, Bandwidth and Frequency Spectrum of FSK. Non coherent FSK Detector, Coherent FSK Detector, FSK Detection Using PLL, BPSK, Coherent PSK Detection, QPSK, Differential PSK.",
+          "Line Coding": "Techniques and Analysis."
+        },
+      if (courseName == "Microprocessor and Assembly Language")
+        {
+          "Introductory Concept":
+              "Evaluation of microprocessor, Types of microprocessor, system bus, hardware of a microprocessor, memory-addressing technique.",
+          "8086 Microprocessor":
+              "Properties, architecture, registers, FLAGS register, physical address calculation, addressing modes, Instruction set, Instruction format, Fetch-decode-Execution cycle, interrupt, Types of interrupt, handling interrupt request, interrupt vector and table.",
+          "Advanced Microprocessors":
+              "Intel 80286 architecture, 80286-memory management, Protection; Intel 80386 functional diagram; 386 programming model; 80386 modes; Multi programming, 80486 and Pentium microprocessor.",
+          "I/O operation":
+              "Isolated and memory mapped I/O, DMA technique, I/O ports, I/O processor.",
+          "Assembly Language":
+              "Hardware of Microprocessor, Registers, assembler, Assembly language syntax, variables, Directives, Basic Instructions and their formats, The FLAG register, JMP, LOOP, CMP instructions, Conditional jump instruction, programming with high level structure.",
+          "Logic instructions":
+              "Logic instructions, Shift instructions, Rotate instruction, the stack and stack related instructions, Procedure and procedure related instructions, Multiplication and Division instructions-MUL, IMUL, DIV, IDIV, CBW, CWD, arrays, addressing modes, XLAT instructions.",
+          "String instructions":
+              "String instructions, Macro definition, Parameters in Macro, Macro directives, Nested macros, Interrupt, Interrupt vector and routine, Bios Interrupt, Dos Interrupt, The IN, OUT, INS and OUTS instructions."
+        },
+      if (courseName == "Theory of Computation")
+        {
+          "Finite automata":
+              "Deterministic finite automata (DFA). Non-deterministic finite automata (NDFA). Equivalence and conversion of DFA and NDFA. Pushdown automata.",
+          "Context free languages":
+              "Context free grammars, push down automata; context free languages.",
+          "Turing machines":
+              "Basic machines. Configuration. Computing with Turing machines. Combining, Turing machines."
+        },
+      if (courseName == "Operating Systems")
+        {
+          "Principle of operating systems and Operating system structure":
+              "Definition of operating system, Different kinds of operating systems (Desktop, Multiprocessor, Distributed, Clustered, Real time, Hand held systems), Operating-System Services, User Operating-System Interface, System Calls, Types of System Calls, System Programs, Operating-System Design and Implementation, Operating-System Structure, Virtual Machines.",
+          "Concurrency control, Recovery System and Distribute databases":
+              "Lock-Based Protocols, Granting of locks, Two-phase locking protocol, Graph based protocol, Tree protocol, Timestamp based protocols, Deadlock detection and recovery. Failure classification, Storage types, Checkpoints. Distributed data, Replication and Fragmentation.",
+          "Multiprocessing and time sharing, Process coordination, Deadlocks":
+              "Multiple-Processor Scheduling, Thread Scheduling, Algorithm Evaluation, Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Recovery From Deadlock. Control and scheduling of large information processing systems, Resource allocation; Dispatching; Processor access methods; Job control languages.",
+          "Memory Organization":
+              "Introduction, Characteristics of memory systems, Main memory design, Memory hierarchy, Cache memory, Virtual memory and memory management concepts.",
+          "Memory management":
+              "Background, Swapping, Contiguous Memory Allocation, Paging, Structure of the Page Table, Segmentation, Demand Paging, Page Replacement, Thrashing, Demand Paging, Page Replacement.",
+          "File systems":
+              "File Concept, Access Methods, Directory Structure, File-System Mounting, File Sharing, File-System Implementation, Directory Implementation, Allocation Methods.",
+          "Protection and security":
+              "Protection, Principles of Protection, Domain of Protection, Access Matrix, Access Control, Revocation of Access Rights, The Security Problem, Program Threats, System and Network Threats, Cryptography as a Security Tool, User Authentication, Implementing Security Defenses, Fire walling to Protect Systems and Networks.",
+          "Advanced topics":
+              "Distributed operating system, distributed file system, synchronization, real time systems, multimedia operating system."
+        },
+      if (courseName == "Microwave Engineering")
+        {
+          "Microstrips": "Structures and characteristics.",
+          "Rectangular Resonant Cavities":
+              "Energy storage, losses. impedance transformer, filters, isolator.",
+          "Microwave Devices":
+              "Semiconductor Microwave devices, Transit time effect velocity Modulation, Microwave amplifier and oscillator; Klystron (Multicavity and reflex), Magnetron, TWT, other microwave tubes.",
+          "Antennas":
+              "Small current element, radiation resistance, radiation pattern and properties, Hertzian and half wave dipoles, Mono pole, horn, rhombic and parabolic reflector, array, and Yagi- Uda antenna.",
+          "Radar and Electronic Navigation Systems":
+              "Radar principles; Civil, military and weather applications, Radar equation, Transmitters and radiators, Factor influencing maximum range; Moving target indicator(MTI), Tracking Radar system and search systems; Electronic navigation systems, LORAN, ILS, SONAR.",
+          "Modern Trends in Microwaves Engineering":
+              "Effect of Microwaves on human body, Medical and Civil applications of microwaves, Electromagnetic interference / Electromagnetic Compatibility (EMI / EMC), Monolithic Microwave IC fabrication, RFMEMS for microwave components, Microwave Imaging."
+        },
+      if (courseName == "Compiler Design")
+        {
+          "Compiler Design Principles and Techniques":
+              "Introduction; A simple syntax-directed translator; Lexical analysis; Syntax analysis; Syntax directed translation; Intermediate code generation; Run-time environments; Code generation; Machine-Independent optimizations; Instruction level parallelism; Optimizing for parallelism and locality; Interprocedural analysis, etc.",
+          "Tools for Programming, Parser Generation, Debugging and Testing in Linux":
+              "Programming tools: the GNU compiler tool chain, building software with GNU make, building and using libraries, coverage testing with GNU gcov, profiling with GNU gprof, building packages with automake/autoconf, etc.; parser generation with flex and bison; Debugging and Testing: software unit testing frameworks, debugging with GDB, code hardening, etc."
+        },
+      if (courseName == "Computer Peripheral and Interfacing")
+        {
+          "Input devices":
+              "Keyboard; Key switching mechanism and coding techniques; Static encoder; Lockout and rollover; Scanning encoder; Keyboard without key.",
+          "Modern data-entry devices":
+              "Scanners overview; Bar code reader; Optical mark reader (OMR); Optical Character Reader (OCR); Digitizer: Reading technique, Capacitive Electrostatic scanning digitizer.",
+          "Display devices":
+              "CRT; Basic CRT operations; Timing and frequencies; CRT controller ICs; LCDs; LCD technologies; Passive and active matrix; Guest-host techniques; Twisted-pneumatic LCDs; LCD reliability; Electroluminescent display.",
+          "Printers":
+              "Impact printers; Dot matrix printer, needle principal; Laser printing; Ink-Jet printing; Color printing; Plotters.",
+          "Storage devices":
+              "Floppy disk; Floppy disk controller; Position control with stepping actuators; Magnetic hard disk and controller; Compact disk.",
+          "Introductory Concept of Interfacing":
+              "I/O interface, memory interface, interfacing components and their characteristics.",
+          "Serial and parallel Interface":
+              "Characteristics of memory and I/O interface, Synchronous and asynchronous communication, Serial I/O interface, RS232, 8251A communication interface, RS-232 interface, 8155A Programmable peripheral Interface, Parallel adapter, parallel port.",
+          "Interfacing components":
+              "8284A Programmable timer, Bus architecture, Bus Timing, Bus Controller, analog and digital interface, Interrupt sources, types of interrupt, 8259A priority interrupt controller, Daisy chain.",
+          "I/O Controller":
+              "8237A DMA Controller, Floppy and Hard disk Controller.",
+          "Embedded System":
+              "Introduction to Embedded system, The Embedded Design Life Cycle, Models of Computation, State Charts, General language Characteristics (SDL, Petri nets, Message Sequence Charts, UML, JAVA, HDL), Embedded System Hardware, (Input, Communication, Processing Unit, Memories, output) Embedded operating systems, middleware & Scheduling, Implementing, ASIC, Embedded Systems Hardware/Software co-design."
+        },
+      if (courseName == "Computer Networks")
+        {
+          "Introduction":
+              "Computer networks, Types of Computer networks, Network Topology, Circuit Switching and Packet Switching, protocol and protocol hierarchies, The OSI reference model, TCP/IP protocol suit.",
+          "Physical Layer and Media":
+              "Guided transmission media, wireless transmission, radio waves, microwaves, infrared, Bluetooth; satellites communication etc.",
+          "The Network layer":
+              "Network layer design issues: IP addressing, IP packet forwarding, Sub-netting, CIDR, Internet Protocol, ICMP, ARP, RARP, DHCP, and IPv6 overview, Address mapping, Error reporting and multicasting; Delivery, Forwarding, and Routing algorithms, Congestion control algorithms.",
+          "The Transport layer":
+              "The transport service, Elements of transport protocols, simple transport protocols, User datagram protocol (UDP) – UDP operations and UDP package modules, Transmission control protocol (TCP) – TCP features, TCP Connection establishment and termination, TCP Flow control and error control, Congestion control.",
+          "The Application layer":
+              "The Domain Name System, Electronic Mail, Network Management: SNMP, World Wide Web, HTTP, Multimedia etc.",
+          "Multiplexing, Spreading and switching":
+              "Multiplexing – FDM, WDM, TDM (Synchronous and statistical) spread spectrum FHSS & DSSS, Circuit Switching, Packet Switching, Message Switching, Routing Algorithms, Virtual Circuit and Datagram, Congestion Control Algorithms, Quality of Service, Internetworking, Internetworking Devices etc.",
+          "Error-Recovery and Link-Control":
+              "Data link layer and control, Error detection and correction, framing, flow and error control, Stop-and-Wait protocol, Automatic Repeat Request (ARQ), Go-Back-N, Selective Repeat, HDLC, PPP.",
+          "Multiple Access":
+              "Random Access; ALOHA, CSMA, CSMA/CD, CSMA/CA, Channelized Access; CDMA, TDMA, FDMA, Controlled Access; Reservation, Poling, Token Passing. Ethernet, Wireless LANs, and Bluetooth.",
+          "Network Layer Protocols":
+              "Address Resolution Protocol, Internet Protocol, Internet Control Message Protocol, IPV6, Routing Information Protocol, Open Shortest Path First, Border Gateway Protocol, User Datagram Protocol, Transmission Control Protocol."
+        },
+      if (courseName == "Software Engineering")
+        {
+          "Software Engineering Paradigms":
+              "Definition of S/W Eng.; The classical life cycle; prototyping fourth generation technique; The product and the process, measurement, matrices.",
+          "Software Project Planning":
+              "Project planning objectives; S/W slope; Resources; Metrics for S/W productivity and quality; S/W project estimation; Decomposition techniques; Empirical Estimation Models; Automated Estimation tools; S/W project scheduling.",
+          "Requirements Analysis Fundamentals":
+              "Analysis principle; Software Prototyping Specification; Requirement Analysis Methodologies; Structured and object oriented analysis; Data Flow-oriented Analysis methods.",
+          "Software Design Fundamentals":
+              "Design process; Design fundamentals: S/W architecture, program structure, Data structure, S/W procedure, Modularity, abstraction; Effective modular design; Procedural design; Data flow-oriented Design; Top-down and bottom-up design; Design Process considerations; Transform analysis; Transaction analysis; Data structure-oriented design: Logical construction of programs and systems, Data structured systems development; object-oriented design; Design concepts; Methods; strategy. Real-time Design; coding style: Code documentation, Data declaration, statement construction, Input/output.",
+          "Software reliability and availability models":
+              "Software quality factors; software review; software quality metrics; Software reliability; Software quality assurance approach.",
+          "Software Testing Techniques":
+              "Testing fundamentals; White box testing; Basis path testing; Loop testing; Black Box testing.",
+          "Software Testing Strategies":
+              "Verification and validation; Organization for software testing; Unit testing; Integration testing; Validation testing; System testing; The art of debugging.",
+          "Software Maintenance and configuration management":
+              "Definition; Maintenance Characteristics; Maintainability; Maintenance tasks; Software configuration management."
+        },
+      if (courseName == "Bio-Informatics")
+        {
+          "Introductory Concept":
+              "Basics of Biology, Molecular Biology and Bioinformatics, The central Dogma, DNA, transcription, Translation, Genomics, Amino acids, Proteomics and Genomics, Human Computer Interaction and Bioinformatics.",
+          "Genome Analysis and Gene Mapping":
+              "Genome analysis, genome mapping, sequence Alignment, pair wise sequence alignment, Multiple sequence alignment, local and global alignment, sequence alignment techniques: dot matrix, dynamic algorithms, Popular algorithms: Needleman and Wunsch, Smith-Waterman, Scoring methods: PAM, BLOSUM, Phylogenetic analysis. Tools for similarity search, BLAST, Phi-BLAST, Psi-BLAST, FASTA.",
+          "Classification and Analysis of Protein":
+              "Overview of protein structure, protein structure Database, Data Capture, capturing micro array data, protein structure visualization tools, protein structure alignment, protein classification approaches, Alpha and beta structure analysis, structure comparison, protein structure analysis and prediction, motif, profiles, patterns and fingerprint search, protein evolution, Methods of 2D structure prediction, 2-D Gel Electrophoresis, 2-D Gel Electrophoresis image analysis, tools: CAROL, PiKA, Z3, PDQuest.",
+          "Multiple sequence alignment, Functional annotation of sequences, Gene Identification and Prediction":
+              "Gene Expression and Microarray, Hidden Markov Model, Navigation the NCBI web site. Genbank, EMBL, OMIM, Pubmed, Navigation other genome database sites (Ensembl, Celera).",
+          "Bionic Arm":
+              "Introduction of bionic devices, working principle of bionic arm, first bionic man and woman, prospect of bionic devices, latest bionic components."
+        },
+      if (courseName == "Telecommunication Engineering")
+        {
+          "Introduction":
+              "Evolution of Telecommunications, Simple Telephone Communications, Basics of Switching System, Manual Switching System, Major Telecommunication Networks.",
+          "Switching":
+              "Circuit Switching, Packet Switching, Message Switching, Crossbar Switching, Routing Algorithms, Virtual Circuit and Datagram, Congestion Control Algorithms, Quality of Service, Quality of Experience, Internetworking, and Internetworking Devices etc.",
+          "Telephone and Cable Network for Data Transmission":
+              "Telephone network; Subscriber loop systems, Switching hierarchy and routing, Transmission plan, Transmission systems, Numbering plan, Charging plan, Signaling techniques, In channel signaling, Common channel signaling, Dial-up modem, cable telephone Network etc.",
+          "Traffic Engineering":
+              "Network traffic load and parameters, Grade of services and blocking probability, Modeling switching systems, Incoming traffic and service time characterization, Blocking models and loss estimates, Delay systems.",
+          "Multimedia Communication":
+              "Categories of Audio and Video Services, Digitizing Audio and Video, Audio and Video Compression, Streaming Stored Audio and Video, Streaming Live Audio and Video, Real-Time Interactive Audio and Video, Quality of Service, Quality of Experience, Internet Service Models, Best-Effort Service Model, Real-Time Transport Protocol, Real-Time Transport Control Protocol, Skype, Signaling for Voice over IP, Integrated Service Model, ReSerVation Protocol, differentiated Service Model, Content Distribution Networks.",
+          "Satellite Communication":
+              "Overview of Satellite System, Satellite communications: Satellite architecture; Satellite network segments; Operational frequency bands and characteristics; Multiple access techniques; VSAT; Emerging Applications and innovations in satellite; Global Positioning System (GPS)."
+        },
+      if (courseName == "Simulation and Modeling")
+        {
+          "Basic Simulation Modeling":
+              "The Nature of Simulation Systems, Models, and Simulation Discrete-Event Simulation Simulation of a Single-Server Queueing Alternative Approaches to Modeling and Coding Simulations, Parallel and Distributed Simulation, Simulation across the Internet and Web-Based Simulation, Steps in a Sound Simulation Study, Other Types of Simulation: Continuous Simulation, Combined Discrete-Continuous Simulation.",
+          "Modeling Complex Systems":
+              "Introduction, List Processing in Simulation, Approaches to Storing Lists in a Computer Linked Storage Allocation, A Simple Simulation Language: simlib. Single-Server Queueing Simulation with simlib Time-Shared Computer Model Job-Shop Model Efficient Event-List Manipulation.",
+          "Simulation Software":
+              "Comparison of Simulation Packages with Programming Languages Classification of Simulation Software General-Purpose Simulation Packages Object-Oriented Simulation, Building Valid, Credible, and Appropriately Detailed Simulation Models Experimental Design, Sensitivity Analysis, and Optimization Simulation of Manufacturing Systems.",
+          "Simulation":
+              "Partial Differential Equations, Random Signals, Hybrid Simulation, Digital Simulation; Simulation Language-GPSS, SIMSCRIPT, CSMP, etc."
+        },
+      if (courseName == "Cryptography and Cyber Law")
+        {
+          "Introduction to Security":
+              "Need for security, Security approaches, Principles of security, Types of attacks.",
+          "Cryptographic Techniques":
+              "Plaintext, Cipher text, Substitution & Transposition techniques, Encryption & Decryption, Types of attacks, Key range & Size.",
+          "Symmetric & Asymmetric Key Cryptography":
+              "Algorithm types & Modes, DES, IDEA, Differential & Linear Cryptanalysis, RSA, Symmetric & Asymmetric key together, Digital signature, Knapsack algorithm.",
+          "User Authentication Mechanism":
+              "Authentication basics, Passwords, Authentication tokens, Certificate-based & Biometric authentication, Firewall.",
+          "Case Studies of Cryptography":
+              "Daniel of service attacks, IP spoofing attacks, Secure inter-branch payment transactions.",
+          "Cyber Law":
+              "Digital copyrights issues, illegal duplication of software, human rights and data encryption, international cyber law, information sharing, cyber squatting.",
+          "Basic Concepts of Technology and Law":
+              "Understanding the Technology of Internet, Scope of Cyber Laws, Cyber Jurisprudence.",
+          "Law of Digital Contracts":
+              "The Essence of Digital Contracts, The System of Digital Signatures, The Role and Function of Certifying Authorities, The Science of Cryptography.",
+          "Intellectual Property Issues in Cyber Space":
+              "Domain Names and Related issues, Copyright in the Digital Media, Patents in the Cyber World.",
+          "Rights of Netizens and E-Governance":
+              "Privacy and Freedom Issues in the Cyber World, E-Governance, Cyber Crimes and Cyber Laws. Information Technology Act, International Scenario in Cyber Laws, Cyber Law Issues for Management, Security Perspective, Internet Security Issues, Digital Signatures for Securing Information Assets, Security Policies."
+        },
+      if (courseName == "E-Commerce and Web Programming")
+        {
+          "Internet Overview":
+              "Intra- and Inter-networking, Internet, Internet architecture, Internet service providers (ISP), Tier architecture of the Internet, Internet core, Access networks (DSL, cable, Wireless etc.)",
+          "Internet Applications":
+              "Voice Over IP (VoIP), Video on Demand (VoD), IPTV, and other multimedia and real-time applications.",
+          "Web Programming":
+              "The web, web 2.0 and Ajax, browser basics, XHTML, cascading style sheets (CSS), JavaScript, dynamic HTML, XML, RSS, building Ajax-enabled web application, Macromedia Flash, Adobe ® Flex TM, Macromedia ® Dreamweaver ®, web servers (IIS and Apache), database: SQL, MySQL, DBI and ADO.NET 2.0, web services, PHP, ASP.NET, web forms and web controls, JavaServer Pages web applications, Perl and CGI (Common Gateway Interface), etc."
+        },
+      if (courseName == "Digital Image Processing")
+        {
+          "Introduction":
+              "Introduction of Digital Image Processing and Pattern Recognition, Application areas, Fundamental steps of Digital Image Processing, Components of Digital Image Processing, Image & Video, Image & Human eyes, Color TV scheme.",
+          "Analog and Digital Image":
+              "Analog and Digital Image, Image Acquisition and acquisition devices, Spatial and amplitude quantization, Pixels, Resolution, Aspect Ratio, Gray levels, Relationship color and gray levels.",
+          "Image Enhancement":
+              "Different types of Image Enhancement operations, Spatial domain and frequency domain processing, Different types of filtering.",
+          "Image Compression":
+              "Fundamental concepts of Image Compression and Data Compression, Data Redundancy, Image Compression models, Error-free and Lossy compression, Image Compression Standards.",
+          "Morphological Processing & Segmentation":
+              "Image Segmentation, Different types of Segmentation, Edge linking and boundary detection, Thresholding, Region-oriented segmentation, Morphological Image Processing, Dilation, Erosion, Opening, Closing, Hit and Miss etc.",
+          "Image Representation":
+              "Object representation and description algorithms, Run Code, Chain Code, Signature, Skeleton, Boundary detection, Feature Extraction, few case studies.",
+          "Pattern Recognition":
+              "Fundamental concepts of Pattern Recognition, Pattern, Pattern Classes, Types of Pattern Recognition, Decision Theoretic methods, Structural method, Statistical method, Neural Network, Few case studies like speech recognition, fingerprint recognition, character recognition etc.",
+          "Multimedia Applications":
+              "Tele-Conferencing, Virtual Reality, Authoring Tools, Multimedia Documents, Games."
+        },
       if (courseName == "Wireless and Mobile Communication")
         {
           "History and Evolution of Mobile Radio Communication":
-              "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
+              "Principle of Conventional Mobile Radio Systems, Limitations of Conventional Mobile Radio System.",
           "Radio Paging":
-              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
-          "History and Evolution of Mobile Radio Communications":
-              "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
-          "Radio Pagings":
-              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
-          "History and Evolution of Mobile Radio Communicationa":
-              "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
-          "Radio Paginga":
-              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
-          "History and Evolution of Mobile Radio Communicationd":
-              "Principle of Conventional Mobile Radio System, Limitation of Conventional Mobile Radio System",
-          "Radio Pagingd":
-              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture",
+              "Introduction, Paging Receiver Types, On Site Paging, Transmitter Specifications, Wide Area Paging, Transmission Specifications, Paging Receivers Architecture.",
+          "Cellular Radio Systems":
+              "Basic Elements of a Cellular Radio System/Network, Principles of Operations, Frequency Spectrum and its Management, Radio Planning, Overview of Cellular Standard Systems, Digital Cellular Systems, Details of TACS and GDSM Architecture. 1G, 2G, 3G, 4G and the Forthcoming 5G Cellular Mobile Systems.",
+          "Mobile Communications by Satellite":
+              "Service Systems in Operation, INMARSAT, MSAT, LEO and MEO Satellite, GMPCS Mobile Telephone and Data Sensing System using LEO and MEO Satellites (Iridium, Teledesic).",
+          "Introduction to Wireless Networks":
+              "Wireless access networks – wireless mesh networks, personal area networks (wireless sensor networks, body area networks, LowPan, and Bluetooth), wireless and mobile ad hoc networks, challenged networks (DTNs, VANETs).",
+          "Wireless MAC Protocols":
+              "IEEE 802.11, IEEE 802.11e, IEEE 802.11n, IEEE 802.11s, IEEE 802.15.4, S-MAC, B-MAC, IEEE 802.22/20, IEEE 802.16d/e.",
+          "Wireless Routing":
+              "Routing matrix – ETX, ETT, WCETT, AirTime Metric, routing protocols – AODV, DSR, DSDV, HWMP, sensor network routing, VANET routing etc.",
+          "Wireless Transport Protocols":
+              "Wireless TCP and its variants, Hop by Hop Congestion Control, Rate based Congestion Control etc.",
+          "Emerging Technologies":
+              "Bluetooth, Radio Frequency Identification (RFID), Wireless Broadband (WiMAX), Mobile IP, Voice Over Internet Protocol (VOIP), Session Initiation Protocol (SIP)."
         },
       if (courseName == "Optical Communication")
         {
           "Introduction":
-              "Basic Optical Communication System, Advantages and application of optical fiber Communication systems",
+              "Basic Optical communication system, Advantages and application of optical fiber communication systems.",
+          "Propagation in Dielectric Waveguides":
+              "Slab waveguide, Modes in symmetric and asymmetric waveguide, Coupling to the waveguide, Dispersion and distortion in the slab waveguide, integrated optic component.",
+          "Attenuation in Optical Fiber":
+              "Introduction, attenuation, absorption, Rayleigh scattering, Pulse distortion and information rate.",
+          "Optical Fiber and Fiber Cables":
+              "Classification of fiber and fiber cables, step index fiber, graded index fiber, Description of modes and types of modes, Different type of modes, Numerical aperture and multipath dispersion in step-index and graded index fiber, Construction of fiber and fiber optic cable.",
+          "Light Sources":
+              "LED, LD, Optical amplifiers fiber laser, vertical cavity surface-emitting laser diodes.",
+          "Light Detectors":
+              "Photo detection, photomultiplier, semiconductor photodiode, PIN photo diode, Avalanche photodiode, and their comparison.",
+          "Coupler and Connectors":
+              "Connector principle, fiber end preparation, splices, connectors, source coupling, loss mechanism.",
+          "Network Distribution and Fiber Components":
+              "Direction coupler, star coupler, optical switches, wavelength converters, isolator, Attenuators, circulator, polarization, port configuration of coupler, fiber Bragg grating, Array wave guide gratings, diffraction gratings.",
+          "Noise and Detection":
+              "Thermal and shot noise’s, error rates, receiver circuit design, coherent optical fiber detection system, optic heterodyne receivers.",
+          "System Design":
+              "Analogue and digital system design, few practical problem and example, application of fiber optic communication in telecommunication.",
+          "Optical Communication":
+              "Optical Communication system with analog and digital modulation formats; performance and system budgets; Multi channel system, WDM."
+        },
+      if (courseName == "Digital Signal Processing")
+        {
+          "Discrete Fourier Transform":
+              "Frequency-domain sampling, Discrete Fourier Transform (DFT), Properties of DFT, Linear filtering and frequency analysis of signals using DFT, Discrete Cosine Transform.",
+          "Efficient Computation of DFT":
+              "Fast Fourier Transform (FFT) algorithms, Applications of FFT algorithms, Linear filtering approach to the computation of DFT, Quantization effects in the computation of DFT.",
+          "Digital Filters":
+              "Causality, Symmetric and Antisymmetric Finite Impulse Response (FIR) filters, Linear-phase FIR filters, FIR differentiator, Hilbert transformer, Infinite Impulse Response (IIR) filter design methods, Frequency transformations.",
+          "Multirate Signal Processing":
+              "Decimation by a factor D, Interpolation by a factor I, Sampling rate conversion (SRC), Filter design for SRC: Direct Form FIR Digital Filter Structure, Cascade Form FIR Digital Filter Structure, Polyphase FIR Structure, Multistage Implementation of SRC, SRC of band pass signal, SRC by arbitrary factor, Multirate signal processing applications.",
+          "Optimum Filters and Spectrum Estimation":
+              "FIR Wiener Filter, IIR Wiener Filter, Discrete Kalman Filter, Nonparametric Methods: The Periodogram method, Bartlett’s method, Welch’s method, Blackman-Turkey method, Parametric Methods: Autocorrelation method, Co-variance method, Modified Co-variance method, Burg method, Frequency Estimations.",
+          "Adaptive Filtering":
+              "Introduction, FIR Adaptive Filters, Adaptive Recursive Filters, Recursive Least Squares: Exponentially Weighted RLS, Sliding window RLS (WRLS).",
+          "Software Developments":
+              "Assembly programs, C programs, mixing C and assembly code, software development tools.",
+          "Hardware Issues":
+              "Hardware selection, configurations, and hardware tools. System considerations. Introduction to code composer studio (CCS)."
+        },
+      if (courseName == "Artificial Intelligence")
+        {
+          "Concepts of Artificial Intelligence":
+              "Introduction, The Foundations of AI, The History of AI, AI technique, The State of the Art.",
+          "Problems and Problem Solving":
+              "Problems, Example of Problems, Problem Formulation, Problem-solving methods.",
+          "Various Searching Techniques":
+              "Search Strategies, Uninformed (blind) search strategies like Breadth-First search, Uniform cost search, Depth-First Search etc. and Informed or Heuristic Search Strategies like Generate-and-test, Hill Climbing, Best-First Search, Problem Reduction, Constraint Satisfaction, Means-End Analysis etc.",
+          "Propositional and First-Order Logic":
+              "Knowledge Representation, Reasoning and Logic; Propositional Logic: Syntax, Semantics, Validity and Inference, Rules of Inference for Propositional logic; First-Order Logic: Syntax and Semantics, Using first-order logic.",
+          "Inference in First-Order Logic":
+              "Inference Rules Involving Quantifiers, Example Proof, Generalized Modus Ponens, Forward and Backward Chaining, Completeness, Resolution.",
+          "Game Playing":
+              "Introduction, Perfect Decisions, Imperfect Decisions, Alpha-Beta Pruning.",
+          "Natural Language Processing":
+              "Introduction, Syntactic Processing, Semantic Analysis, Discourse and Pragmatic Processing.",
+          "Planning":
+              "Basic Plan-Generating Systems, Forward Production System, Representation for Plans, Backward Production System, STRIPS, Examples with problem domain.",
+          "Learning":
+              "Introduction to Learning, Inductive Learning, Learning Decision Trees, Neural Net Learning.",
+          "Probabilistic Reasoning":
+              "Probability and Bayes’ Theorem, Certainty Factors and Rule-Based Systems, Bayesian Networks, Fuzzy Logic.",
+          "Expert Systems":
+              "Expert system architecture, Representation and Using Domain Knowledge, Expert System Shells, Explanation, Knowledge Acquisition."
         }
     ];
   }
