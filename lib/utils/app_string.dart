@@ -211,6 +211,328 @@ class AppString {
           "Co-ordinate Geometry of three dimensions":
               "System of co-ordinates, Distance of two points, Section formula, Projections, Directiones cosines, Equation’s of planes and Lines."
         },
+      if (courseName == "Operational Amplifier and Timer Circuits")
+        {
+          "Operational amplifiers and applications":
+              "Linear application of op-amp, Feedback, gain, input and output impedances, Properties of an ideal Op-Amp, non-inverting and inverting amplifiers, integrator, differentiator, weighted summer and other applications of Op-Amp circuits, frequency response and bandwidth.",
+          "Oscillators circuits and wave generators":
+              "Phase shift oscillator, Wine Bridge, Crystal, Tune collector oscillators, Sinusoidal. Feedback, Comparators and Converters, Schmitt trigger.",
+          "Active Filters":
+              "Butterworth filters, Band-pass filters, Band Reject Filters, All pass Filters.",
+          "Linear wave shaping":
+              "Linear and non-linear wave shaping. Diode Wave Shaping Techniques, Clipping and Clamping circuits. Non-linear function circuits. Negative resistance switching, Voltage regulators, Pulse generation.",
+          "Timing Circuits":
+              "Bi-stable, monostable and astablemultivibrators, sweep and staircase generator, IC 555 and its application. Application of Op-Amp in timing circuits. VCO, PLL, blocking oscillators, practical op-amp ICs and advanced ICs."
+        },
+      if (courseName == "Digital Logic Design")
+        {
+          "Basic Logic Circuits":
+              "Gates; Boolean Algebra; De Morgan’s Theorem; Half and Full Adders, Subtractor, Sum of products and Product of sums; Mapping technique; Karnaugh map; Minimization of Logic circuits.",
+          "Combinational Circuits":
+              "Encoders & Decoders; Comparator; Parity generator, ALU; Multiplexer, Demultiplexers.",
+          "Silicon integrated Logic Families":
+              "AND, OR, INVERTER, other logic families with TTL, TL, RTL, RCTL, TIL, ECL, IIL, SOS, FET, & CMOSTL families.",
+          "Sequential Circuits":
+              "S-R, M/S, JK, D and T Flip-flops and Latches, Registers and Counters; Asynchronous and Synchronous counters, Different types of Registers; Counter application: Frequency and Digital Clock.",
+          "Memory Circuit & System":
+              "Introduction to memories; SAM; ROM; Static and Dynamic RAM, Flash memories, Charge coupled device and magnetic bubble memories. A/D Converter, D/A Converter.",
+          "Arithmetic of Computers":
+              "Constructing an Arithmetic Logic Unit, Multiplication, Division, Floating Point.",
+          "The Processor: Data path and Control":
+              "Introduction, Building a Data path, A Simple Implementation Scheme, A Multicycle Implementation, Microprogramming: Simplifying Control Design."
+        },
+      if (courseName == "Object Oriented Programming with Java")
+        {
+          "JAVA":
+              "Introduction to OOP, Data Types and Variables Operation and Expressions Features of Object Oriented Programming.",
+          "Control Structures": "Decision Making, Looping, Branching.",
+          "Arrays, String Vectors":
+              "Java Methods, Concept of classes and objects, Encapsulation, Inheritance, Interfaces, Abstract Class and Multiple Inheritance, Polymorphism, Interfaces and Multiple Inheritance.",
+          "API":
+              "Overriding, Overloading, Packages, Generics, Collections, Thread, Multithreading, Error and Exception Handling.",
+          "Graphical User Interfaces":
+              "Java Applets, Files and Streams, Java Database Connectivity (JDBC), Servlet, JSP."
+        },
+      if (courseName == "Algorithm Design and Analysis")
+        {
+          "Algorithm and Data structure":
+              "Algorithm, Properties of good algorithm, Data Structure, Application Areas of Algorithm.",
+          "Complexity Analysis of Algorithms":
+              "Asymptotic Notations, Recurrences, Insertion Sort and its Complexity Analysis.",
+          "Divide and Conquer approach & Heaps":
+              "Divide and Conquer approach and Merge Sort, Algorithm of Merge Sort, Complexity Analysis Merge Sort, Quick Sort and its Algorithm, Complexity Analysis of Quick Sort, Heap Construction Algorithm, Heap sort, Application of Heap: Priority Queue.",
+          "Dynamic Programming":
+              "Algorithm of LCS, Dynamic Programming, Matrix Chain Multiplication Example, Algorithm of MCM, and Example of Longest Common Subsequence, Complexity Analysis.",
+          "Greedy Algorithm":
+              "Greedy Algorithm, Activity Selection Problem, Huffman Codes and it’s application, Knapsack problem, NP-Hard and NP-Complete Problems, Traveling Salesperson Problem, Complexity Analysis.",
+          "Graphs basic & traversal techniques":
+              "Representation of Graphs, Breadth First Search, Depth First Search, Algorithm of BFS and DFS, Minimum Spanning Tree, Kruskal and Prims Algorithm, Complexity Analysis.",
+          "Shortest Path & Backtracking":
+              "Single Source Shortest Paths, Dijkstra’s Algorithm, and Bellman-Ford Algorithm. All pair Shortest Path, Floyd Warshall Algorithm, Backtracking, n-Queen Problem, and Complexity Analysis, Branch and Bounds.",
+          "Computational Geometry & Number Theory":
+              "Computational Geometry, Line Segment Properties, Convex Hull, Graham Scan Algorithm of Convex Hull, Number Theory, GCD, Modular Arithmetic, Prime Number generation, Complexity Analysis."
+        },
+      if (courseName == "Differential Equation and Vector Calculus")
+        {
+          "Ordinary Differential Equation (ODE)":
+              "Degree and order of ordinary differential equations; Formation of differential equations; Solution of first order differential equations by various methods; Solution of first order but higher degree ordinary differential equations; Solution of general linear equations of second and higher orders with constant coefficients; Solution of homogeneous linear equations and its applications; Solution of differential equations of higher order when dependent and independent variables are absent; Solution of differential equation by the method based on factorization of operators.",
+          "Partial Differential Equations (PDE)":
+              "Introduction. Linear and non-linear first order equations. Standard forms. Linear equations of higher order. Equations of the second order with variable coefficients. Wave equations. Particular solution with boundary and initial conditions.",
+          "Series Solution":
+              "Solution of differential equations in series by the method of Frobenius; Bessel’s functions, Legendre’s polynomials and their properties.",
+          "Vector Algebra":
+              "Scalars and vectors, equality of vectors; Addition and subtraction of vectors; Multiplication of vectors by scalars; Scalar and vector product of two vectors and their geometrical interpretation; Triple products and multiple products; Linear dependence and independence of vectors.",
+          "Vector Calculus":
+              "Differentiation and integration of vectors together with elementary applications; Definition of line, surface and volume integrals; Gradient, divergence and curl of point functions, various formulae, Gauss’s theorem, Stoke’s theorem, Green’s theorem."
+        },
+      if (courseName == "Statistics")
+        {
+          "Analysis of statistical data":
+              "Location, Dispersion and their measures, Skewness, Kurtosis and their measures, Moment and Cumulants and Practical examples.",
+          "Probability":
+              "Concept of probability, Sample Space, Events union and Intersection of Events. Probability of events, Loss of probability, Conditional probabilities. Bose Einstein Statistics. Bay’s Theorem, Chebysec’s Inequality and Practical examples.",
+          "Random variables and probability Distribution":
+              "Basic concepts, Discrete and continuous random variables, Density and distributional functions, Mathematical expectation and variance, Joint marginal and conditional density functions. Conditional Expectation and conditional variance. Moments and Cumulant generating functions. Characteristic function. Study of Binomial Poisson, Normal and Bivariate Normal distribution and Practical examples.",
+          "Linear Regression":
+              "Correlation, Rank correlation. Partial and Multiple correlations Linear Regression for two Variables, Principle of Least Squares Method, Lines of best fit, Residual Analysis and examples.",
+          "Test of Significance":
+              "Basic ideas of Null hypothesis, Alternative hypothesis, Type-I error Type-II error level of significance Degree of freedom, Rejection region and Acceptance region. Test of Single mean, Single variance, Two sample means and Variances. Test for 2×2 contingency tables, Independence test and practical examples."
+        },
+      if (courseName == "Computer Organization and Architecture")
+        {
+          "Computer abstraction and technology":
+              "Introduction, Below Your Program, Under the Covers, Integrated Circuits: Fueling, Innovation.",
+          "The roll of performance":
+              "Introduction, Measuring Performance, Relating the Metrics, Choosing Programs to, Evaluate Performance, Comparing and Summarizing Performance.",
+          "Language of the Machine":
+              "Introduction, Operations of the Computer Hardware, Operands of the Computer Hardware, Representing Instructions in the Computer, Instructions for Making Decisions, Supporting Procedures in Computer Hardware, Beyond Numbers, Other Styles of MIPS Addressing.",
+          "Arithmetic of Computers":
+              "Introduction, Signed and Unsigned Numbers, Addition and Subtraction, Logical Operations, Constructing an Arithmetic Logic Unit, Multiplication, Division, Floating Point.",
+          "The Processor: Data path and Control":
+              "Introduction, Building a Data path, A Simple Implementation Scheme, A Multicycle Implementation, Microprogramming: Simplifying Control Design.",
+          "Enhancing performance with pipelining":
+              "An Overview of Pipelining, A Pipelined Data path, Pipelined Control, Data Hazards and Forwarding, Data Hazards and Stalls, Branch Hazards.",
+          "Multiprocessors":
+              "Introduction, Programming Multiprocessors, Multiprocessors Connected by a Single Bus, and Multiprocessors Connected by a Network, Clusters, and Network Topologies.",
+          "Memory Organization":
+              "Introduction, Characteristics of memory systems, Main memory design, Memory hierarchy, Cache memory, Virtual memory and memory management concepts."
+        },
+      if (courseName == "Computer Based Numerical Methods")
+        {
+          "Introduction":
+              "Significant figure, Rounding off numbers, Error in Numerical Calculation.",
+          "Solution of Algebraic and Transcendental Equation":
+              "Interpolation with equal and unequal intervals- Missing values, Newton’s binomial expansion formula, Newton’s forward and backward interpolation formula. Central difference interpolation formulae, inverse interpolation.",
+          "Numerical Differentiation":
+              "Derivate using Newton’s forward backward and Stirling’s formula.",
+          "Numerical Integration":
+              "General quadrature formula for equidistant ordinates. Trapezoidal rule, Simpson’s one-third rule, Simpson’s three-eight rules, Weddle’s rule.",
+          "Numerical solution of ordinary differential equations":
+              "Taylor’s series method, Euler’s method, Adams Bashforth Moulton method, Runge-Kutta method.",
+          "Solution of linear equations":
+              "Gauss-elimination method, Iteration methods. Gauss-Seidel method, Gauss-Jordan method.",
+          "Curve Fitting":
+              "Objective of fitting a curve, fitting a straight line, fitting a parabola."
+        },
+      if (courseName == "Advanced Java and Mobile Application")
+        {
+          "Java Database Connectivity":
+              "JDBC Product, Types of Driver, Two tier Client/Server Model, Three tier Client/Server Model, Basic steps of JDBC, Creating and Executing SQL statement, The Result Set Object, Working with Database Meta Data, Interface.",
+          "Servlets":
+              "Servlet Interaction & Advance Servlet, Life Cycle of Servlets, Java Servlet Development Kit, Javax.servlet package, Reading Servlet parameter, Reading Initialization parameter.",
+          "JavaServer Pages":
+              "JSP Technologies, Understanding the Client Server Model, Understanding the Web Server Software, Configuring the JSP Server, Handling JSP Errors.",
+          "Remote Method Invocation":
+              "RMI Architecture, Designing RMI Application, Executing RMI Application.",
+          "EJB":
+              "Types of Enterprise Java Beans, Session Bean & Entity Bean, Features of Session Bean, Life Cycle of Stateful Session Bean.",
+          "XML": "What is XML, XML Syntax Rules, XML Parsing.",
+          "Struts":
+              "Introduction to Apache Struts, MVC Architecture, Struts Architecture, How Struts Works, Introduction to Struts Controller, Introduction to Struts Action Class.",
+          "Hibernate and Spring Framework":
+              "Basic features of Hibernate and Spring Framework."
+        },
+      if (courseName == "Database Management Systems")
+        {
+          "Introduction":
+              "Database, data, database management system, Database system versus file system, Data model, Database language, Database user administration, Database system structure, Storage manager, Overview of Physical storage medium.",
+          "Entity-Relationship Model":
+              "Entity sets, Relationship sets, Mapping Cardinalities, Keys, Attributes, Entity relationship diagram, Weak entity sets, Specialization, Generalization, Structure of Relational databases, Database Schema.",
+          "The Relational Algebra and SQL":
+              "Selection, projection, Union, Set difference, Cartesian-product, Rename, Set-intersection, Natural-join, Division, Assignment, projection, Aggregate functions.",
+          "Integrity and Security and Relational Database Design":
+              "Domain constraint, Integrity, Assertions, Triggers, Authorization, Authentication, Security, Privileges, Roles, Audit trails, Encryption-Decryption Algorithm.",
+          "Database Design and E-R model":
+              "The Entity Relationship Model, Constraints, Entity Relationship Diagram, Entity Relationship Design Issues.",
+          "Storage and File Structure":
+              "Physical Storage Media, Magnetic Disk, RAID, Storage Access, File Organization."
+        },
+      if (courseName == "Complex Variables and Fourier Analysis")
+        {
+          "Complex Variable":
+              "Complex number system; General functions of a complex variable; Limits and continuity of a function of complex variable and related theorems; Complex differentiation and the Cauchy–Riemann Equations; Mapping by elementary functions.",
+          "Fourier Analysis":
+              "Fourier series, Convergence of Fourier Series, Fourier analysis; Fourier Integral; Fourier transforms and their uses in solving boundary value problems of wave equations.",
+          "Laplace Transforms":
+              "Definition; Laplace transforms of some elementary functions; Sufficient conditions for existence of Laplace transforms; Inverse Laplace transforms."
+        },
+      if (courseName == "Economics")
+        {
+          "Introduction":
+              "Definition of economics, Scope and utility of studying economics.",
+          "Micro-economics":
+              "The theory of demand and supply and their elasticity, Price determination, Nature of an economic theory, applicability of economic theories to the problems of developing countries.",
+          "Market":
+              "Concepts of market and market structure. Cost analysis and cost function.",
+          "Macroeconomics":
+              "Savings, investment, employment, National income analysis, Inflation, Monetary policy, Fiscal policy and trade policy.",
+          "Economics of development":
+              "Dimensions of development, Relevance of theory, the employment problem.",
+          "Economics of planning":
+              "Planning and market, Policy models, Planning experience."
+        },
+      if (courseName == "Financial and Managerial Accounting")
+        {
+          "Preliminaries":
+              "Introduction to Accounting, History and development of accounting thought, types of accounting, Accounting Principles & ethics, Accounting Equation & Transaction Analysis.",
+          "Recording Business Transactions":
+              "The Accounts & their types. Double-Entry Book keeping system; Invoice, discount from purchase price.",
+          "The Adjusting & Closing Procedure":
+              "The adjusting process, Accrual versus cash basis Accounting, Preparation of Adjusted trial balance and financial statements.",
+          "Accounting in practice":
+              "Worksheet. Purchase book, sales book, cashbook, patty cashbook.",
+          "Cost In General":
+              "Cost in general: objectives & classifications; Costing Journals; Job order costing, Process costing & Overhead costing.",
+          "Marginal & Relevant costing":
+              "Marginal costing tools and techniques, cost-volume-profit analysis. Guidelines for decision making."
+        },
+      if (courseName == "Data Mining") {
+        "Data Mining": "Definitions; KDD (Knowledge Discovery Database) versus Data Mining; DBMS versus Data Mining, Data Mining Techniques; Issues and challenges; Applications of Data Warehousing & Data mining in Government.",
+        "Association Rules": "A priori algorithm, Partition algorithm, Dynamic inset counting algorithm, FP-tree growth algorithm; Generalized association rule.",
+        "Clustering Techniques": "Clustering paradigm, Partition algorithms, CLARA, CLARANS; Hierarchical clustering, DBSCAN, BIRCH, CURE; Categorical clustering, STIRR, ROCK, CACTUS.",
+        "Decision Trees": "Tree construction principle, Best split, Splitting indices, Splitting criteria, Decision tree construction with presorting.",
+        "Web Mining": "Web content Mining, Web structure Mining, Web usage Mining, Text Mining.",
+        "Temporal and Spatial Data Mining": "Basic concepts of temporal data Mining, The GSP algorithm, SPADE, SPIRIT, WUM."
+      },
+
+
+
+      if (courseName == "Analog and Digital Communication") {
+        "Radio Wave Propagation": "Surface and space wave propagation, Sky wave through Ionosphere. Pulse method for measuring height and electron concentration of Ionospheric region; Chapman theory of layer formation, Ionospheric storm.",
+        "Modulation and Demodulation": "Linear modulation - AM, SSB, DSB, and SSB generation, PLL Circuit to generate linear modulated signals, low and high power modulators, Exponential modulation- FM and PM, demodulation of AM, FM.",
+        "Broadcasting Transmitter": "Transmitter classification, Elements of transmitter, AM and FM transmitters, SSB transmitter, stabilized master oscillator, Frequency multipliers, Mixer circuits, RF power amplifier, Preemphasis circuits, Transmitter performance-carrier frequency requirements, audio frequency response, distortion, and signal to distortion ratio.",
+        "Radio Receiver": "Receiver classification, Elements of receiver, AM and FM receivers, SSB receiver, Comparison of AM and FM receivers, Noise in receiver, AGC circuits, AFC circuits, Noise limiters, Receiver sensitivity, Cross modulation, Spurious responses.",
+        "Representation of Random Signals and Noise in Communication System": "Signal Power and Spectral Representations, White noise, Thermal noise, PSDF of White Signals. Input and Output Relationship for Random Signals and Noise Passed Through a Linear Time Invariant System, Band Limited White Noise, ARC Filtering of White Noise.",
+        "Noise performance of Analog Communication Systems": "Signal-to-Noise Ratio in Linear Modulation, Synchronous Detection of DSB. Signal-to-Noise Ratio for AM and SSB, FM, Effect of Noise in Envelope and Square Law Detection of AM, Threshold Effects in Nonlinear Detectors.",
+        "Elements of Digital Communication Systems": "Model of Digital Communication Systems, Digital Representation of Analog Signal, Certain issues in Digital Transmission, Advantages of Digital Communication Systems, Bandwidth-S/N tradeoff, Hartley Shannon Law.",
+        "Pulse Code Modulation": "PCM Generation and Reconstruction, Quantization noise, Non uniform Quantization and Companding, DPCM, Adaptive DPCM, DM and Adaptive DM. Noise in PCM and DM.",
+        "Digital Modulation Techniques": "ASK, ASK Modulator, Coherent ASK Detector, Non-Coherent ASK Detector, FSK, Bandwidth and Frequency Spectrum of FSK. Non coherent FSK Detector, Coherent FSK Detector, FSK Detection Using PLL, BPSK, Coherent PSK Detection, QPSK, Differential PSK.",
+        "Line Coding": "Techniques and Analysis."
+      },
+
+
+
+      if (courseName == "Microprocessor and Assembly Language") {
+        "Introductory Concept": "Evaluation of microprocessor, Types of microprocessor, system bus, hardware of a microprocessor, memory-addressing technique.",
+        "8086 Microprocessor": "Properties, architecture, registers, FLAGS register, physical address calculation, addressing modes, Instruction set, Instruction format, Fetch-decode-Execution cycle, interrupt, Types of interrupt, handling interrupt request, interrupt vector and table.",
+        "Advanced Microprocessors": "Intel 80286 architecture, 80286-memory management, Protection; Intel 80386 functional diagram; 386 programming model; 80386 modes; Multi programming, 80486 and Pentium microprocessor.",
+        "I/O operation": "Isolated and memory mapped I/O, DMA technique, I/O ports, I/O processor.",
+        "Assembly Language": "Hardware of Microprocessor, Registers, assembler, Assembly language syntax, variables, Directives, Basic Instructions and their formats, The FLAG register, JMP, LOOP, CMP instructions, Conditional jump instruction, programming with high level structure.",
+        "Logic instructions": "Logic instructions, Shift instructions, Rotate instruction, the stack and stack related instructions, Procedure and procedure related instructions, Multiplication and Division instructions-MUL, IMUL, DIV, IDIV, CBW, CWD, arrays, addressing modes, XLAT instructions.",
+        "String instructions": "String instructions, Macro definition, Parameters in Macro, Macro directives, Nested macros, Interrupt, Interrupt vector and routine, Bios Interrupt, Dos Interrupt, The IN, OUT, INS and OUTS instructions."
+      },
+
+
+
+
+      if (courseName == "Theory of Computation") {
+        "Finite automata": "Deterministic finite automata (DFA). Non-deterministic finite automata (NDFA). Equivalence and conversion of DFA and NDFA. Pushdown automata.",
+        "Context free languages": "Context free grammars, push down automata; context free languages.",
+        "Turing machines": "Basic machines. Configuration. Computing with Turing machines. Combining, Turing machines."
+      },
+
+
+
+      if (courseName == "Operating Systems") {
+        "Principle of operating systems and Operating system structure": "Definition of operating system, Different kinds of operating systems (Desktop, Multiprocessor, Distributed, Clustered, Real time, Hand held systems), Operating-System Services, User Operating-System Interface, System Calls, Types of System Calls, System Programs, Operating-System Design and Implementation, Operating-System Structure, Virtual Machines.",
+        "Concurrency control, Recovery System and Distribute databases": "Lock-Based Protocols, Granting of locks, Two-phase locking protocol, Graph based protocol, Tree protocol, Timestamp based protocols, Deadlock detection and recovery. Failure classification, Storage types, Checkpoints. Distributed data, Replication and Fragmentation.",
+        "Multiprocessing and time sharing, Process coordination, Deadlocks": "Multiple-Processor Scheduling, Thread Scheduling, Algorithm Evaluation, Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Recovery From Deadlock. Control and scheduling of large information processing systems, Resource allocation; Dispatching; Processor access methods; Job control languages.",
+        "Memory Organization": "Introduction, Characteristics of memory systems, Main memory design, Memory hierarchy, Cache memory, Virtual memory and memory management concepts.",
+        "Memory management": "Background, Swapping, Contiguous Memory Allocation, Paging, Structure of the Page Table, Segmentation, Demand Paging, Page Replacement, Thrashing, Demand Paging, Page Replacement.",
+        "File systems": "File Concept, Access Methods, Directory Structure, File-System Mounting, File Sharing, File-System Implementation, Directory Implementation, Allocation Methods.",
+        "Protection and security": "Protection, Principles of Protection, Domain of Protection, Access Matrix, Access Control, Revocation of Access Rights, The Security Problem, Program Threats, System and Network Threats, Cryptography as a Security Tool, User Authentication, Implementing Security Defenses, Fire walling to Protect Systems and Networks.",
+        "Advanced topics": "Distributed operating system, distributed file system, synchronization, real time systems, multimedia operating system."
+      },
+
+
+
+      if (courseName == "Microwave Engineering") {
+        "Microstrips": "Structures and characteristics.",
+        "Rectangular Resonant Cavities": "Energy storage, losses. impedance transformer, filters, isolator.",
+        "Microwave Devices": "Semiconductor Microwave devices, Transit time effect velocity Modulation, Microwave amplifier and oscillator; Klystron (Multicavity and reflex), Magnetron, TWT, other microwave tubes.",
+        "Antennas": "Small current element, radiation resistance, radiation pattern and properties, Hertzian and half wave dipoles, Mono pole, horn, rhombic and parabolic reflector, array, and Yagi- Uda antenna.",
+        "Radar and Electronic Navigation Systems": "Radar principles; Civil, military and weather applications, Radar equation, Transmitters and radiators, Factor influencing maximum range; Moving target indicator(MTI), Tracking Radar system and search systems; Electronic navigation systems, LORAN, ILS, SONAR.",
+        "Modern Trends in Microwaves Engineering": "Effect of Microwaves on human body, Medical and Civil applications of microwaves, Electromagnetic interference / Electromagnetic Compatibility (EMI / EMC), Monolithic Microwave IC fabrication, RFMEMS for microwave components, Microwave Imaging."
+      },
+
+
+      if (courseName == "Compiler Design") {
+        "Compiler Design Principles and Techniques": "Introduction; A simple syntax-directed translator; Lexical analysis; Syntax analysis; Syntax directed translation; Intermediate code generation; Run-time environments; Code generation; Machine-Independent optimizations; Instruction level parallelism; Optimizing for parallelism and locality; Interprocedural analysis, etc.",
+        "Tools for Programming, Parser Generation, Debugging and Testing in Linux": "Programming tools: the GNU compiler tool chain, building software with GNU make, building and using libraries, coverage testing with GNU gcov, profiling with GNU gprof, building packages with automake/autoconf, etc.; parser generation with flex and bison; Debugging and Testing: software unit testing frameworks, debugging with GDB, code hardening, etc."
+      },
+
+
+
+      if (courseName == "Computer Peripheral and Interfacing") {
+        "Input devices": "Keyboard; Key switching mechanism and coding techniques; Static encoder; Lockout and rollover; Scanning encoder; Keyboard without key.",
+        "Modern data-entry devices": "Scanners overview; Bar code reader; Optical mark reader (OMR); Optical Character Reader (OCR); Digitizer: Reading technique, Capacitive Electrostatic scanning digitizer.",
+        "Display devices": "CRT; Basic CRT operations; Timing and frequencies; CRT controller ICs; LCDs; LCD technologies; Passive and active matrix; Guest-host techniques; Twisted-pneumatic LCDs; LCD reliability; Electroluminescent display.",
+        "Printers": "Impact printers; Dot matrix printer, needle principal; Laser printing; Ink-Jet printing; Color printing; Plotters.",
+        "Storage devices": "Floppy disk; Floppy disk controller; Position control with stepping actuators; Magnetic hard disk and controller; Compact disk.",
+        "Introductory Concept of Interfacing": "I/O interface, memory interface, interfacing components and their characteristics.",
+        "Serial and parallel Interface": "Characteristics of memory and I/O interface, Synchronous and asynchronous communication, Serial I/O interface, RS232, 8251A communication interface, RS-232 interface, 8155A Programmable peripheral Interface, Parallel adapter, parallel port.",
+        "Interfacing components": "8284A Programmable timer, Bus architecture, Bus Timing, Bus Controller, analog and digital interface, Interrupt sources, types of interrupt, 8259A priority interrupt controller, Daisy chain.",
+        "I/O Controller": "8237A DMA Controller, Floppy and Hard disk Controller.",
+        "Embedded System": "Introduction to Embedded system, The Embedded Design Life Cycle, Models of Computation, State Charts, General language Characteristics (SDL, Petri nets, Message Sequence Charts, UML, JAVA, HDL), Embedded System Hardware, (Input, Communication, Processing Unit, Memories, output) Embedded operating systems, middleware & Scheduling, Implementing, ASIC, Embedded Systems Hardware/Software co-design."
+      },
+
+
+
+      if (courseName == "Computer Networks") {
+        "Introduction": "Computer networks, Types of Computer networks, Network Topology, Circuit Switching and Packet Switching, protocol and protocol hierarchies, The OSI reference model, TCP/IP protocol suit.",
+        "Physical Layer and Media": "Guided transmission media, wireless transmission, radio waves, microwaves, infrared, Bluetooth; satellites communication etc.",
+        "The Network layer": "Network layer design issues: IP addressing, IP packet forwarding, Sub-netting, CIDR, Internet Protocol, ICMP, ARP, RARP, DHCP, and IPv6 overview, Address mapping, Error reporting and multicasting; Delivery, Forwarding, and Routing algorithms, Congestion control algorithms.",
+        "The Transport layer": "The transport service, Elements of transport protocols, simple transport protocols, User datagram protocol (UDP) – UDP operations and UDP package modules, Transmission control protocol (TCP) – TCP features, TCP Connection establishment and termination, TCP Flow control and error control, Congestion control.",
+        "The Application layer": "The Domain Name System, Electronic Mail, Network Management: SNMP, World Wide Web, HTTP, Multimedia etc.",
+        "Multiplexing, Spreading and switching": "Multiplexing – FDM, WDM, TDM (Synchronous and statistical) spread spectrum FHSS & DSSS, Circuit Switching, Packet Switching, Message Switching, Routing Algorithms, Virtual Circuit and Datagram, Congestion Control Algorithms, Quality of Service, Internetworking, Internetworking Devices etc.",
+        "Error-Recovery and Link-Control": "Data link layer and control, Error detection and correction, framing, flow and error control, Stop-and-Wait protocol, Automatic Repeat Request (ARQ), Go-Back-N, Selective Repeat, HDLC, PPP.",
+        "Multiple Access": "Random Access; ALOHA, CSMA, CSMA/CD, CSMA/CA, Channelized Access; CDMA, TDMA, FDMA, Controlled Access; Reservation, Poling, Token Passing. Ethernet, Wireless LANs, and Bluetooth.",
+        "Network Layer Protocols": "Address Resolution Protocol, Internet Protocol, Internet Control Message Protocol, IPV6, Routing Information Protocol, Open Shortest Path First, Border Gateway Protocol, User Datagram Protocol, Transmission Control Protocol."
+      },
+
+
+      if (courseName == "Software Engineering") {
+        "Software Engineering Paradigms": "Definition of S/W Eng.; The classical life cycle; prototyping fourth generation technique; The product and the process, measurement, matrices.",
+        "Software Project Planning": "Project planning objectives; S/W slope; Resources; Metrics for S/W productivity and quality; S/W project estimation; Decomposition techniques; Empirical Estimation Models; Automated Estimation tools; S/W project scheduling.",
+        "Requirements Analysis Fundamentals": "Analysis principle; Software Prototyping Specification; Requirement Analysis Methodologies; Structured and object oriented analysis; Data Flow-oriented Analysis methods.",
+        "Software Design Fundamentals": "Design process; Design fundamentals: S/W architecture, program structure, Data structure, S/W procedure, Modularity, abstraction; Effective modular design; Procedural design; Data flow-oriented Design; Top-down and bottom-up design; Design Process considerations; Transform analysis; Transaction analysis; Data structure-oriented design: Logical construction of programs and systems, Data structured systems development; object-oriented design; Design concepts; Methods; strategy. Real-time Design; coding style: Code documentation, Data declaration, statement construction, Input/output.",
+        "Software reliability and availability models": "Software quality factors; software review; software quality metrics; Software reliability; Software quality assurance approach.",
+        "Software Testing Techniques": "Testing fundamentals; White box testing; Basis path testing; Loop testing; Black Box testing.",
+        "Software Testing Strategies": "Verification and validation; Organization for software testing; Unit testing; Integration testing; Validation testing; System testing; The art of debugging.",
+        "Software Maintenance and configuration management": "Definition; Maintenance Characteristics; Maintainability; Maintenance tasks; Software configuration management."
+      },
+
+
+
+      if (courseName == "Bio-Informatics") {
+        "Introductory Concept": "Basics of Biology, Molecular Biology and Bioinformatics, The central Dogma, DNA, transcription, Translation, Genomics, Amino acids, Proteomics and Genomics, Human Computer Interaction and Bioinformatics.",
+        "Genome Analysis and Gene Mapping": "Genome analysis, genome mapping, sequence Alignment, pair wise sequence alignment, Multiple sequence alignment, local and global alignment, sequence alignment techniques: dot matrix, dynamic algorithms, Popular algorithms: Needleman and Wunsch, Smith-Waterman, Scoring methods: PAM, BLOSUM, Phylogenetic analysis. Tools for similarity search, BLAST, Phi-BLAST, Psi-BLAST, FASTA.",
+        "Classification and Analysis of Protein": "Overview of protein structure, protein structure Database, Data Capture, capturing micro array data, protein structure visualization tools, protein structure alignment, protein classification approaches, Alpha and beta structure analysis, structure comparison, protein structure analysis and prediction, motif, profiles, patterns and fingerprint search, protein evolution, Methods of 2D structure prediction, 2-D Gel Electrophoresis, 2-D Gel Electrophoresis image analysis, tools: CAROL, PiKA, Z3, PDQuest.",
+        "Multiple sequence alignment, Functional annotation of sequences, Gene Identification and Prediction": "Gene Expression and Microarray, Hidden Markov Model, Navigation the NCBI web site. Genbank, EMBL, OMIM, Pubmed, Navigation other genome database sites (Ensembl, Celera).",
+        "Bionic Arm": "Introduction of bionic devices, working principle of bionic arm, first bionic man and woman, prospect of bionic devices, latest bionic components."
+      },
+
+
       if (courseName == "Wireless and Mobile Communication")
         {
           "History and Evolution of Mobile Radio Communication":
