@@ -1,7 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:syllabus_pedia/view/login/login_view_controller.dart';
-import 'package:syllabus_pedia/view/semester_name/semester_name_view.dart';
+import 'package:syllabus_pedia/view/auth/login/login_view_controller.dart';
+import 'package:syllabus_pedia/view/auth/signup/sign_up_view.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
 import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
@@ -14,19 +15,20 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: SafeArea(
         child: Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0,vertical: 24.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
               child: Column(
                 children: [
                   Image.asset("assets/logo/mbstu.png", scale: 1.80),
                   UIHelper().columTitleWithWidget(
                       title: "Email",
                       widget: MyTextField(
-                        textEditingController: _controller.email,
+                        textEditingController: _controller.emailController,
                         suffixIcon: const Icon(
                           Icons.email_outlined,
                         ),
@@ -35,7 +37,8 @@ class LoginView extends StatelessWidget {
                   UIHelper().columTitleWithWidget(
                       title: "Password",
                       widget: Obx(() => MyTextField(
-                            textEditingController: _controller.password,
+                            textEditingController:
+                                _controller.passwordController,
                             textInputAction: TextInputAction.done,
                             hintText: "input password",
                             isPassword: true,
@@ -49,7 +52,7 @@ class LoginView extends StatelessWidget {
                     text: "Login",
                     onPressed: () {
                       if (_controller.checkForm()) {
-                        Get.to(() => SemesterNameView());
+                       _controller.signIn();
                       } else {
                         AlertCustomDialogs()
                             .showAlert(msg: "Please Select All Fields");
@@ -57,9 +60,23 @@ class LoginView extends StatelessWidget {
                     },
                     fontSize: 22,
                   ),
-                  const SizedBox(
-                    height: 8,
-                  )
+                  const SizedBox(height: 16),
+                  RichText(
+                      text: TextSpan(
+                    style: const TextStyle(color: Colors.black, fontSize: 20),
+                    text: "Don't have any account ? ",
+                    children: [
+                      TextSpan(
+                        style: const TextStyle(
+                            decoration: TextDecoration.underline,
+                            color: Colors.blueAccent),
+                        text: "Sign Up",
+                        recognizer: TapGestureRecognizer()..onTap = (){
+                          Get.to(()=>SignUpView());
+                        }
+                      ),
+                    ],
+                  ))
                 ],
               ),
             ),

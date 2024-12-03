@@ -16,7 +16,7 @@ class CourseNameWidget extends StatelessWidget {
           (index) => SemesterButton(
                 text: courseNameList[index],
                 onTab: () {
-                  Get.to(() => CourseContentDetailsView(),
+                  Get.to(() => CourseContentDetailsView(appTittle: courseNameList[index]),
                       arguments: courseNameList[index]);
                 },
               )),

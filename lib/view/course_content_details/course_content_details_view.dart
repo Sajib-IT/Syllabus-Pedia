@@ -8,15 +8,17 @@ import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
 class CourseContentDetailsView extends StatelessWidget {
+  final String appTittle;
   final CourseContentDetailsController _controller =
       Get.put(CourseContentDetailsController());
-  CourseContentDetailsView({super.key});
+  CourseContentDetailsView({super.key,required this.appTittle});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: UIHelper().drawAppbarTitle(title: "Course Content Details")),
+          // title: UIHelper().drawAppbarTitle(title: "Course Content Details")),
+          title: UIHelper().drawAppbarTitle(title: appTittle)),
       floatingActionButton: Container(
         width: 50,
         height: 50,
