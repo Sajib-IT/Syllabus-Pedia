@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -17,16 +19,31 @@ class LoginViewController extends GetxController {
         password: passwordController.text,
       );
     } on FirebaseAuthException catch (e) {
-      print(e);
-      AlertCustomDialogs().showAlert(msg: e.toString());
+      log(e.code);
+      if(e.code == "invalid-credential"){
+        AlertCustomDialogs()
+            .showAlert(msg: "Incorrect Email or Password");
+      }
     }
     EasyLoading.dismiss();
   }
 
+  bool isValidEmail(String email) {
+    final regex = RegExp(r'^it\d{5}@mbstu\.ac\.bd$');
+    return regex.hasMatch(email);
+  }
+
   bool checkForm() {
-    if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
-      return true;
+    if (emailController.text.isEmpty || passwordController.text.isEmpty) {
+      AlertCustomDialogs()
+          .showAlert(msg: "Please Fill Up All Fields");
+      return false;
+    }else{
+      if(!isValidEmail(emailController.text)){
+        AlertCustomDialogs().showAlert(msg: "You Are Not ICT Student");
+        return false;
+      }
     }
-    return false;
+    return true;
   }
 }

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:syllabus_pedia/view/auth/login/login_view.dart';
 import 'package:syllabus_pedia/view/auth/signup/sign_up_controller.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
-import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
@@ -35,7 +34,7 @@ class SignUpView extends StatelessWidget {
                         hintText: "input Email",
                       )),
                   UIHelper().columTitleWithWidget(
-                      title: "ID",
+                      title: "Student ID",
                       widget: MyTextField(
                         textEditingController: _controller.idController,
                         suffixIcon: const Icon(
@@ -67,15 +66,12 @@ class SignUpView extends StatelessWidget {
                           _controller.isPasswordHidden.value = value;
                         },
                       ))),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 16),
                   CustomElevatedButton(
                     text: "Sign Up",
                     onPressed: () {
                       if (_controller.checkForm()) {
                        _controller.signUp();
-                      } else {
-                        AlertCustomDialogs()
-                            .showAlert(msg: "Please Select All Fields");
                       }
                     },
                     fontSize: 22,
@@ -85,7 +81,7 @@ class SignUpView extends StatelessWidget {
                   ),
                   RichText(
                       text: TextSpan(
-                        style: const TextStyle(color: Colors.black, fontSize: 20),
+                        style: const TextStyle(color: Colors.black, fontSize: 18),
                         text: "Already have account ? ",
                         children: [
                           TextSpan(

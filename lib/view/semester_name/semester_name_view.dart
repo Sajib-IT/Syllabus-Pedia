@@ -29,22 +29,24 @@ class SemesterNameView extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ...List.generate(_controller.semesterNameList.length, (index) {
-            return SemesterButton(
-              text: _controller.semesterNameList[index],
-              // fontWeight: index == 3 ? FontWeight.w800 : FontWeight.w500,
-              fontWeight: FontWeight.w500,
-              onTab: () {
-                Get.to(() => CourseNameView(),
-                    arguments: _controller.semesterNameList[index]);
-              },
-            );
-          })
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ...List.generate(_controller.semesterNameList.length, (index) {
+              return SemesterButton(
+                text: _controller.semesterNameList[index],
+                // fontWeight: index == 3 ? FontWeight.w800 : FontWeight.w500,
+                fontWeight: FontWeight.w500,
+                onTab: () {
+                  Get.to(() => CourseNameView(),
+                      arguments: _controller.semesterNameList[index]);
+                },
+              );
+            })
+          ],
+        ),
       ),
     );
   }

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:syllabus_pedia/view/auth/login/login_view_controller.dart';
 import 'package:syllabus_pedia/view/auth/signup/sign_up_view.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
-import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
@@ -47,15 +46,12 @@ class LoginView extends StatelessWidget {
                               _controller.isPasswordHidden.value = value;
                             },
                           ))),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 16),
                   CustomElevatedButton(
                     text: "Login",
                     onPressed: () {
                       if (_controller.checkForm()) {
                        _controller.signIn();
-                      } else {
-                        AlertCustomDialogs()
-                            .showAlert(msg: "Please Select All Fields");
                       }
                     },
                     fontSize: 22,
@@ -63,7 +59,7 @@ class LoginView extends StatelessWidget {
                   const SizedBox(height: 16),
                   RichText(
                       text: TextSpan(
-                    style: const TextStyle(color: Colors.black, fontSize: 20),
+                    style: const TextStyle(color: Colors.black, fontSize: 18),
                     text: "Don't have any account ? ",
                     children: [
                       TextSpan(
