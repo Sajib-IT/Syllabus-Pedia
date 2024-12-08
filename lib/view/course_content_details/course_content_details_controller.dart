@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:syllabus_pedia/utils/app_string.dart';
 
 class CourseContentDetailsController extends GetxController {
   List<Map<String, String>> allCourseContentDetailsList = [];
+  final searchController = TextEditingController();
   String courseName = "";
   RxString selectedText = RxString("");
   @override
@@ -24,8 +26,7 @@ class CourseContentDetailsController extends GetxController {
   }
 
   bool checkValidation(){
-    if(selectedText.value.isNotEmpty &&
-        selectedText.value.length > 5){
+    if(searchController.text.isNotEmpty){
       return true;
     }
     return false;

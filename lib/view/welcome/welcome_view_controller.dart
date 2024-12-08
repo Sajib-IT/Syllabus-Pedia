@@ -11,6 +11,6 @@ class WelcomeViewController extends GetxController {
   void appInit() async {
     await Future.delayed(const Duration(seconds: 2));
     // Get.to(() => LoginView());
-    Get.to(() => AuthView());
+    Get.off(() => AuthView());
   }
 }

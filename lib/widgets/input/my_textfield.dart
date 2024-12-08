@@ -61,7 +61,7 @@ class MyTextField extends StatelessWidget {
           child: Icon(
               isobscureText ? Icons.visibility_off : Icons.visibility,
               color: Colors.grey,
-              size: 18),
+              size: 20),
         )
             : suffixIcon,
         suffixIconColor: WidgetStateColor.resolveWith((states) =>
