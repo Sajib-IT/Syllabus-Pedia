@@ -25,8 +25,8 @@ class CourseContentDetailsController extends GetxController {
         AppString.allCourseContentDetailsList(courseName);
   }
 
-  bool checkValidation(){
-    if(searchController.text.isNotEmpty){
+  bool checkValidation() {
+    if (searchController.text.isNotEmpty && searchController.text.length >= 3) {
       return true;
     }
     return false;

@@ -159,10 +159,16 @@ class CourseContentDetailsView extends StatelessWidget {
             fieldViewBuilder:
                 (context, controller, focusNode, onEditingComplete) {
               controller.text = _controller.searchController.text;
+              _controller.searchController.text = controller.text;
               _controller.searchController.addListener(() {
                 if (_controller.searchController.text != controller.text) {
                   controller.value =
                       _controller.searchController.value;
+                }
+              });
+              controller.addListener((){
+                if (_controller.searchController.text != controller.text) {
+                  _controller.searchController.value = controller.value;
                 }
               });
               return Padding(
@@ -192,7 +198,16 @@ class CourseContentDetailsView extends StatelessWidget {
                           controller: controller,
                           focusNode: focusNode,
                           // onEditingComplete: onEditingComplete,
-                          onEditingComplete: () {},
+                          onEditingComplete: () {
+                            if (_controller.checkValidation()) {
+                              Get.to(() => AiGeneratedTextView(),
+                                  arguments: controller.text);
+                            } else {
+                              AlertCustomDialogs().showAlert(
+                                  msg:
+                                  "Please write or select meaningful words");
+                            }
+                          },
                           decoration: const InputDecoration(
                             hintText: "Selected Text Search",
                             border: InputBorder.none,
