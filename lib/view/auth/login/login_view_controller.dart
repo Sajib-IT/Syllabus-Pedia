@@ -28,8 +28,13 @@ class LoginViewController extends GetxController {
     EasyLoading.dismiss();
   }
 
-  bool isValidEmail(String email) {
+  bool isValidEduEmail(String email) {
     final regex = RegExp(r'^it\d{5}@mbstu\.ac\.bd$');
+    return regex.hasMatch(email);
+  }
+
+  bool isValidEmail(String email) {
+    final regex = RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     return regex.hasMatch(email);
   }
 
@@ -40,7 +45,7 @@ class LoginViewController extends GetxController {
       return false;
     }else{
       if(!isValidEmail(emailController.text)){
-        AlertCustomDialogs().showAlert(msg: "You Are Not ICT Student");
+        AlertCustomDialogs().showAlert(msg: "Invalid Email..");
         return false;
       }
     }

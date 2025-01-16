@@ -23,7 +23,12 @@ class LoginView extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
               child: Column(
                 children: [
-                  Image.asset("assets/logo/mbstu.png", scale: 1.80),
+                  const SizedBox(height: 32),
+                  Image.asset(
+                    "assets/logo/ict_logo.png",
+                    height: 140,
+                    width: 200,
+                  ),
                   UIHelper().columTitleWithWidget(
                       title: "Email",
                       widget: MyTextField(
@@ -51,7 +56,7 @@ class LoginView extends StatelessWidget {
                     text: "Login",
                     onPressed: () {
                       if (_controller.checkForm()) {
-                       _controller.signIn();
+                        _controller.signIn();
                       }
                     },
                     fontSize: 22,
@@ -63,14 +68,14 @@ class LoginView extends StatelessWidget {
                     text: "Don't have any account ? ",
                     children: [
                       TextSpan(
-                        style: const TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: Colors.blueAccent),
-                        text: "Sign Up",
-                        recognizer: TapGestureRecognizer()..onTap = (){
-                          Get.to(()=>SignUpView());
-                        }
-                      ),
+                          style: const TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.blueAccent),
+                          text: "Sign Up",
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Get.to(() => SignUpView());
+                            }),
                     ],
                   ))
                 ],
