@@ -47,6 +47,7 @@ dependencies:
   google_generative_ai: ^0.4.6
   firebase_auth: ^5.3.3
   substring_highlight: ^1.0.33
+  flutter_multi_select_items: ^0.4.3
 
 
 dev_dependencies:

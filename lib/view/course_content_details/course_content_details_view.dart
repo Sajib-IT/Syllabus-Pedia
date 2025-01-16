@@ -3,14 +3,13 @@ import 'package:get/get.dart';
 import 'package:syllabus_pedia/view/ai_generated_text/ai_generated_text_view.dart';
 import 'package:syllabus_pedia/view/course_content_details/course_content_details_controller.dart';
 import 'package:syllabus_pedia/view/course_content_details/widget/course_content_details_widget.dart';
-import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
 class CourseContentDetailsView extends StatelessWidget {
   final String appTittle;
   final CourseContentDetailsController _controller =
       Get.put(CourseContentDetailsController());
-  late TextEditingController controller;
+  // late TextEditingController controller;
   CourseContentDetailsView({super.key, required this.appTittle});
 
   @override
@@ -109,10 +108,12 @@ class CourseContentDetailsView extends StatelessWidget {
               if (textEditingValue.text.isEmpty) {
                 return const Iterable<String>.empty();
               } else {
+                print(
+                    "valluuees ${_controller.allCourseContentDetailsList[0].values.toString()}");
+                print(
+                    "valluuees ${_controller.allCourseContentDetailsList[0].values.toString().split(',').toList()}");
                 // print(
-                //     "valluuees ${_controller.allCourseContentDetailsList[0].values.toString().split(',').toList()}");
-                // print(
-                //     "valluuees ${_controller.allCourseContentDetailsList[0].values.toString().split(',')[2]}");
+                    // "valluuees ${_controller.allCourseContentDetailsList[0].values.toString().split(',')[20]}");
                 List<String> content = _controller
                     .allCourseContentDetailsList[0].values
                     .toString()
@@ -162,11 +163,10 @@ class CourseContentDetailsView extends StatelessWidget {
               _controller.searchController.text = controller.text;
               _controller.searchController.addListener(() {
                 if (_controller.searchController.text != controller.text) {
-                  controller.value =
-                      _controller.searchController.value;
+                  controller.value = _controller.searchController.value;
                 }
               });
-              controller.addListener((){
+              controller.addListener(() {
                 if (_controller.searchController.text != controller.text) {
                   _controller.searchController.value = controller.value;
                 }
@@ -202,10 +202,6 @@ class CourseContentDetailsView extends StatelessWidget {
                             if (_controller.checkValidation()) {
                               Get.to(() => AiGeneratedTextView(),
                                   arguments: controller.text);
-                            } else {
-                              AlertCustomDialogs().showAlert(
-                                  msg:
-                                  "Please write or select meaningful words");
                             }
                           },
                           decoration: const InputDecoration(
@@ -236,10 +232,6 @@ class CourseContentDetailsView extends StatelessWidget {
                             if (_controller.checkValidation()) {
                               Get.to(() => AiGeneratedTextView(),
                                   arguments: controller.text);
-                            } else {
-                              AlertCustomDialogs().showAlert(
-                                  msg:
-                                      "Please write or select meaningful words");
                             }
                           },
                         ),
@@ -278,6 +270,7 @@ class CourseContentDetailsView extends StatelessWidget {
                 children: List.generate(
                     _controller.allCourseContentDetailsList.length, (index) {
                   return CourseContentDetailsWidget(
+                      key: ValueKey(index),
                       courseContentDetails:
                           _controller.allCourseContentDetailsList[index]);
                 }),
