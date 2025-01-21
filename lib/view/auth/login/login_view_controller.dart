@@ -20,10 +20,31 @@ class LoginViewController extends GetxController {
       );
     } on FirebaseAuthException catch (e) {
       log(e.code);
-      if(e.code == "invalid-credential"){
-        AlertCustomDialogs()
-            .showAlert(msg: "Incorrect Email or Password");
+      if (e.code == "invalid-credential") {
+        AlertCustomDialogs().showAlert(msg: "Incorrect Email or Password");
       }
+    }
+    EasyLoading.dismiss();
+  }
+
+  void sendForgetPasswordLink(String email) async {
+    EasyLoading.show(status: "Loading...");
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(
+        email: email.trim(),
+      );
+      AlertCustomDialogs().showSuccess(
+          msg:
+              "If an account with this email exists, a password reset email has been sent.");
+      Get.back();
+    } on FirebaseAuthException catch (e) {
+      log(e.code);
+      AlertCustomDialogs().showAlert(msg: e.message!);
+      // if (e.code == "user-not-found") {
+      //   AlertCustomDialogs().showAlert(msg: "User Not Found");
+      // }else if(e.code == "invalid-email"){
+      //   AlertCustomDialogs().showAlert(msg: e.message!);
+      // }
     }
     EasyLoading.dismiss();
   }
@@ -40,11 +61,10 @@ class LoginViewController extends GetxController {
 
   bool checkForm() {
     if (emailController.text.isEmpty || passwordController.text.isEmpty) {
-      AlertCustomDialogs()
-          .showAlert(msg: "Please Fill Up All Fields");
+      AlertCustomDialogs().showAlert(msg: "Please Fill Up All Fields");
       return false;
-    }else{
-      if(!isValidEmail(emailController.text)){
+    } else {
+      if (!isValidEmail(emailController.text)) {
         AlertCustomDialogs().showAlert(msg: "Invalid Email..");
         return false;
       }

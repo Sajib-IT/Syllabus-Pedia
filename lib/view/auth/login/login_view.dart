@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/view/auth/forget_password/forget_password_view.dart';
 import 'package:syllabus_pedia/view/auth/login/login_view_controller.dart';
 import 'package:syllabus_pedia/view/auth/signup/sign_up_view.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
@@ -51,6 +52,18 @@ class LoginView extends StatelessWidget {
                               _controller.isPasswordHidden.value = value;
                             },
                           ))),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(() =>  ForgetPasswordView());
+                    },
+                    child: const Align(
+                      alignment: Alignment.topRight,
+                      child: Text(
+                        "Forget Password?",
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 16),
                   CustomElevatedButton(
                     text: "Login",
