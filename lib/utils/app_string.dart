@@ -100,9 +100,9 @@ class AppString {
           "Introduction":
               "Definition of Software, its classification, Problem solving steps, Introduction of C and its structure, history and Characteristics, Introduction to keywords, constants and identifiers, Fundamental of C variable and data types, Rules of constants, Introduction to arithmetic, relational and logical operators, Introduction to expressions, Managing data input, Managing data output.",
           "Control Statements":
-              "Decision making and branching. If and if…else statements, Other control statements, switch and the ‘?:’ operator, Decision making and looping. While looping, Do…while and for looping statements, Jump statement goto, break and continue.",
+              "Decision making and branching, If and if…else statements, Other control statements, switch and the ‘?:’ operator, Decision making and looping. While looping, Do…while and for looping statements, Jump statement goto, break and continue.",
           "Array":
-              "Introduction to arrays. One-dimensional array. Some sample programs, Two-dimensional array. Some sample programs, String handling in C and some examples.",
+              "Introduction to arrays, One-dimensional array, Some sample programs, Two-dimensional array, Some sample programs, String handling in C and some examples.",
           "String":
               "Introduction to character Arrays and String, Declaring and Initializing String variables, Reading Strings from Terminal, Writing String to Screen, Putting String Together, Comparison of Two Strings, String Handling Functions, Table of Strings.",
           "Function":
@@ -119,7 +119,7 @@ class AppString {
           "Electricity & Magnetisms":
               "Electronics: Charge & Matter, Column’s Law, The Electric Field, The electric field strength, Line of force, A dipole in an electric field, Gauss’s Law, Gauss’s law and Coulomb’s law, Electrical Potential, Capacitance & Resistance, Ohmic& non Ohmic material. Electromagnetism: Magnetic fields, Magnetic Force on a current, The Hall effect.",
           "Physical Optics":
-              "Theories of light, Hyugen's principle and construction. Interference of light, Young's double slit experiment, Fresnel bi-prism, Newton's ring, interferometers. Diffraction of light, Fresnel and Fraunhoffer diffraction, diffraction by single and double slit diffraction gratings. Polarization, production and analysis of polarized light, optical activity, optics of crystals, optical guiding properties in details."
+              "Theories of light, Hyugen's principle and construction, Interference of light, Young's double slit experiment, Fresnel bi-prism, Newton's ring, interferometers. Diffraction of light, Fresnel and Fraunhoffer diffraction, diffraction by single and double slit diffraction gratings. Polarization, production and analysis of polarized light, optical activity, optics of crystals, optical guiding properties in details."
         },
       if (courseName == "Mathematics-I (Differential and Integral Calculus)")
         {
@@ -170,17 +170,17 @@ class AppString {
           "Array":
               "Insertion, Deletion, Matrix representation of arrays, Multidimensional arrays, Pointers arrays, Record structures, Representation of records in memory, parallel arrays. Sparse matrices. Usefulness of sparse matrices.",
           "Stack and Queue":
-              "Push and Pop operations. Arithmetic expression: polish notation implementation using stack Queue: Insert and Delete operations. Double ended queue, Priority queue.",
+              "Push and Pop operations, Arithmetic expression: polish notation implementation using stack Queue: Insert and Delete operations. Double ended queue, Priority queue.",
           "Recursion":
               "Direct and indirect recursion, Simulation of recursion, Depth of recursion, Removal of recursion. Towers of Hanoi using recursion.",
           "Linked lists":
-              "One way and two way linked lists. Traversing, Searching, Insertion and Deletion operations. Concept of algorithm analysis.",
+              "One way and two way linked lists, Traversing, Searching, Insertion and Deletion operations. Concept of algorithm analysis.",
           "Sorting and Searching":
               "Bubble sort, Quick sort Merge sort, Selection sort, Inserting sort, Radix sort, Shell sort, linear searching, binary searching.",
           "Tree":
-              "Binary Trees, Binary Search Trees: Traversing (inorder, preorder, postorder). Insertion and deletion operations in Binary search trees. Threaded Binary Tree, Application of trees. Set representation, decision trees, game trees and counting binary trees. B-tree and basic operations on B-tree. Binomial tree and binomial heap, operation on binomial heaps. Fibonacci heaps and operations. Heap sort. Huffman codes and compression algorithm. Disjoint set and operations and disjoint set forests.",
+              "Binary Trees, Binary Search Trees: Traversing (inorder, preorder, postorder), Insertion and deletion operations in Binary search trees. Threaded Binary Tree, Application of trees. Set representation, decision trees, game trees and counting binary trees. B-tree and basic operations on B-tree. Binomial tree and binomial heap, operation on binomial heaps. Fibonacci heaps and operations. Heap sort. Huffman codes and compression algorithm. Disjoint set and operations and disjoint set forests.",
           "Graphs":
-              "Graph representation, Adjacency matrix, Path matrix, Linked representation. Shortest paths: Warshall's algorithm. Operations on graphs, traversing a graph, Spanning trees.",
+              "Graph representation, Adjacency matrix, Path matrix, Linked representation, Shortest paths: Warshall's algorithm. Operations on graphs, traversing a graph, Spanning trees.",
           "Symbol tables": "Static and dynamic tree tables.",
           "Hashing":
               "Hash function and overflow handling, Open hashing (Separate chaining), Close hashing (Open addressing), Linear probing, Quadratic probing, Double hashing."
