@@ -21,7 +21,6 @@ class ElementDetailsWidget extends StatelessWidget {
             onSelectionChanged: (textSelection, cause) {
               final select =
                   element.key.substring(textSelection.start, textSelection.end);
-              print(select);
               _controller.selectedText.value = select;
               _controller.searchController.text = _controller.selectedText.value;
             },
