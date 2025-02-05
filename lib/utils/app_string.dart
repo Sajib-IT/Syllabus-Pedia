@@ -100,7 +100,7 @@ class AppString {
           "Introduction":
               "Definition of Software, its classification, Problem solving steps, Introduction of C and its structure, history and Characteristics, Introduction to keywords, constants and identifiers, Fundamental of C variable and data types, Rules of constants, Introduction to arithmetic, relational and logical operators, Introduction to expressions, Managing data input, Managing data output.",
           "Control Statements":
-              "Decision making and branching, If and if…else statements, Other control statements, switch and the ‘?:’ operator, Decision making and looping. While looping, Do…while and for looping statements, Jump statement goto, break and continue.",
+              "Decision making and branching, If and if…else statements, Other control statements, switch and the ‘?:’ operator, Decision making and looping, While looping, Do…while and for looping statements, Jump statement goto, break and continue.",
           "Array":
               "Introduction to arrays, One-dimensional array, Some sample programs, Two-dimensional array, Some sample programs, String handling in C and some examples.",
           "String":
