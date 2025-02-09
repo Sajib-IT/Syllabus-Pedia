@@ -151,7 +151,7 @@ class AppString {
           "Bipolar Junction Transistor (BJT)":
               "PNP and NPN transistors, principles of operation, biasing and thermal stability, characteristics in different configurations, small signal analysis, BJT amplifiers, -model, T-model, transistor switching time, equivalent circuits using transconductance parameter for low, medium and high frequency operation of BJT.",
           "Field Effect Transistor (FET)":
-              "Construction of JFET and MOSFET, characteristics and principles of operation, FET biasing, small signal analysis, introduction to CMOS and its application. Application of FETs as amplifier and switches, load line analysis, equivalent circuits using transconductance parameter for low, medium and high frequency operation of FETs, Ebers-Moll model view, design and analysis of single/multistage amplifiers, power amplifiers, differential amplifiers.",
+              "Construction of JFET and MOSFET, characteristics and principles of operation, FET biasing, small signal analysis, introduction to CMOS and its application, Application of FETs as amplifier and switches, load line analysis, equivalent circuits using transconductance parameter for low, medium and high frequency operation of FETs, Ebers-Moll model view, design and analysis of single/multistage amplifiers, power amplifiers, differential amplifiers.",
           "Industrial Semiconductor Device":
               "Structure and basic operation of LED, SCR, UJT, DIAC, TRIAC, photo diodes, phototransistor, solar cells, Concept on vacuum devices."
         },
