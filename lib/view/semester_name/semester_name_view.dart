@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syllabus_pedia/view/course_name/course_name_view.dart';
 import 'package:syllabus_pedia/view/semester_name/semester_name_controller.dart';
+import 'package:syllabus_pedia/view/semester_name/widget/drawer_view.dart';
 import 'package:syllabus_pedia/widgets/button/semester_button.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
@@ -17,18 +18,19 @@ class SemesterNameView extends StatelessWidget {
         title: Padding(
             padding: const EdgeInsets.only(left: 16.0),
             child: UIHelper().drawAppbarTitle(title: "Semester Name List")),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: GestureDetector(
-              onTap: () {
-                FirebaseAuth.instance.signOut();
-              },
-              child: const Icon(Icons.logout),
-            ),
-          )
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: const EdgeInsets.only(right: 16.0),
+        //     child: GestureDetector(
+        //       onTap: () {
+        //         FirebaseAuth.instance.signOut();
+        //       },
+        //       child: const Icon(Icons.logout),
+        //     ),
+        //   )
+        // ],
       ),
+      drawer: DrawerView(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

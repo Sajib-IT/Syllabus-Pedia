@@ -11,6 +11,7 @@ class MyTextField extends StatelessWidget {
   final Function? isPasswordObscure;
   final bool isPassword;
   Widget? suffixIcon;
+  final int? maxLine;
   Widget? prefixIcon;
 
   MyTextField(
@@ -23,6 +24,7 @@ class MyTextField extends StatelessWidget {
         this.onSubmitted,
         this.prefixIcon,
         this.suffixIcon,
+        this.maxLine = 1,
         this.isPasswordObscure,
         this.isobscureText = false,
         this.isPassword = false
@@ -33,6 +35,7 @@ class MyTextField extends StatelessWidget {
     return TextField(
       controller: textEditingController,
       obscureText: isobscureText,
+      maxLines: maxLine,
       onChanged: (value) {
         if (onChanged != null) {
           onChanged!(value);

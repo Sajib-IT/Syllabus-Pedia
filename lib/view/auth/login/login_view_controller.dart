@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/utils/user_or_admin.dart';
 import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 
 class LoginViewController extends GetxController {
@@ -18,6 +19,7 @@ class LoginViewController extends GetxController {
         email: emailController.text,
         password: passwordController.text,
       );
+      // UserOrAdmin().init();
     } on FirebaseAuthException catch (e) {
       log(e.code);
       if (e.code == "invalid-credential") {

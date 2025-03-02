@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:syllabus_pedia/view/auth/login/login_view.dart';
 import 'package:syllabus_pedia/view/auth/signup/sign_up_controller.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
+import 'package:syllabus_pedia/widgets/drop_down/my_dropdown_button.dart';
 import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
@@ -41,11 +42,47 @@ class SignUpView extends StatelessWidget {
                   UIHelper().columTitleWithWidget(
                       title: "Student ID",
                       widget: MyTextField(
-                        textEditingController: _controller.idController,
+                        textEditingController: _controller.studentIdController,
                         suffixIcon: const Icon(
                           Icons.edit_square,
                         ),
                         hintText: "input ID",
+                      )),
+                  UIHelper().columTitleWithWidget(
+                      title: "Student Name",
+                      widget: MyTextField(
+                        textEditingController: _controller.nameController,
+                        suffixIcon: const Icon(
+                          Icons.person,
+                        ),
+                        hintText: "input Name",
+                      )),
+                  UIHelper().columTitleWithWidget(
+                      title: "Session",
+                      widget: MyTextField(
+                        textEditingController: _controller.sessionController,
+                        suffixIcon: const Icon(
+                          Icons.timelapse,
+                        ),
+                        hintText: "input Session",
+                      )),
+                  UIHelper().columTitleWithWidget(
+                      title: "Year",
+                      widget: MyDropdownButton(
+                        value: _controller.selectedYear.value,
+                        items: _controller.yearList,
+                        onChanged: (value) {
+                          _controller.selectedYear.value = value;
+                        },
+                      )),
+                  UIHelper().columTitleWithWidget(
+                      title: "Semester",
+                      widget: MyDropdownButton(
+                        value: _controller.selectedSemester.value,
+                        items: _controller.semesterList,
+                        onChanged: (value) {
+                          _controller.selectedSemester.value = value;
+                        },
                       )),
                   UIHelper().columTitleWithWidget(
                       title: "Password",
