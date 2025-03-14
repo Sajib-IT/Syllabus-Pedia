@@ -34,6 +34,7 @@ class AuthController extends GetxController {
       isEmailVerified.value = FirebaseAuth.instance.currentUser!.emailVerified;
       print(isEmailVerified.value);
       if (isEmailVerified.value) {
+        timer?.cancel();
         Get.offAll(() => AuthView());
       }
       // else {
