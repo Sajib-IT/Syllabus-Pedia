@@ -4,6 +4,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:syllabus_pedia/config/api-key.dart';
+import 'package:syllabus_pedia/utils/user_or_admin.dart';
 import 'package:syllabus_pedia/view/model/search_history_model.dart';
 
 class AiGeneratedTextController extends GetxController {
@@ -18,7 +19,7 @@ class AiGeneratedTextController extends GetxController {
       print(selectedText);
     }
     aiGeneratedText();
-    getStudentIdData();
+    // getStudentIdData();
     super.onInit();
   }
 
@@ -38,26 +39,26 @@ class AiGeneratedTextController extends GetxController {
     print(response.text);
   }
 
-  Future<void> getStudentIdData() async {
-    try {
-      final DocumentSnapshot snapshot = await FirebaseFirestore.instance
-          .collection('user')
-          .doc(FirebaseAuth.instance.currentUser!.uid)
-          .get();
-
-      if (snapshot.exists) {
-        final data = snapshot.data() as Map<String, dynamic>;
-        final studentId =
-            data['studentId']; // Assuming 'studentId' is the field name
-        print('Student ID: $studentId');
-        saveSearchHistory(studentId, selectedText);
-      } else {
-        print('Document does not exist');
-      }
-    } catch (e) {
-      print('Error fetching user data: $e');
-    }
-  }
+  // Future<void> getStudentIdData() async {
+  //   try {
+  //     final DocumentSnapshot snapshot = await FirebaseFirestore.instance
+  //         .collection('user')
+  //         .doc(FirebaseAuth.instance.currentUser!.uid)
+  //         .get();
+  //
+  //     if (snapshot.exists) {
+  //       final data = snapshot.data() as Map<String, dynamic>;
+  //       final studentId =
+  //           data['studentId']; // Assuming 'studentId' is the field name
+  //       print('Student ID: $studentId');
+  //       saveSearchHistory(studentId, selectedText);
+  //     } else {
+  //       print('Document does not exist');
+  //     }
+  //   } catch (e) {
+  //     print('Error fetching user data: $e');
+  //   }
+  // }
 
   Future<void> saveSearchHistory(String studentId, String historyText) async {
     try {
@@ -70,7 +71,7 @@ class AiGeneratedTextController extends GetxController {
       // Reference to the student's search history subcollection
       CollectionReference searchHistoryRef = firestore
           .collection('info')
-          .doc(studentId)
+          .doc(UserOrAdmin().studentId)
           .collection('searchHistory');
       Map<String, dynamic> searchHistoryModelJson = searchHistoryModel.toJson();
       // Create a new document with timestamp

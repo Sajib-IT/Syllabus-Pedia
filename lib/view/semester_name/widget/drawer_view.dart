@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syllabus_pedia/utils/user_or_admin.dart';
+import 'package:syllabus_pedia/view/admin/browse_info/browse_info_view.dart';
 import 'package:syllabus_pedia/view/admin/search_history/search_history_view.dart';
 import 'package:syllabus_pedia/view/feedback/admin_feedback.dart';
 import 'package:syllabus_pedia/view/feedback/user_feedback.dart';
@@ -74,6 +75,7 @@ class DrawerView extends StatelessWidget {
               ),
               onTap: () {
                 Get.back();
+                Get.to(() => BrowseInfoView());
               },
             ),
           if(!UserOrAdmin().isAdmin)

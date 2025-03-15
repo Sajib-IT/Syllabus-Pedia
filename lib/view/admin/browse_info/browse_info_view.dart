@@ -1,20 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/view/admin/browse_info/widget/browse_info_widget.dart';
 import 'package:syllabus_pedia/view/admin/search_history/search_history_widget.dart';
 import 'package:syllabus_pedia/widgets/button/semester_button.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
-
-
-class SearchHistoryView extends StatefulWidget {
-  const SearchHistoryView({super.key});
+class BrowseInfoView extends StatefulWidget {
+  const BrowseInfoView({super.key});
 
   @override
-  _SearchHistoryViewState createState() => _SearchHistoryViewState();
+  State<BrowseInfoView> createState() => _BrowseInfoViewState();
 }
 
-class _SearchHistoryViewState extends State<SearchHistoryView> {
+class _BrowseInfoViewState extends State<BrowseInfoView> {
   final TextEditingController _searchController = TextEditingController();
   String _searchText = '';
 
@@ -28,7 +27,7 @@ class _SearchHistoryViewState extends State<SearchHistoryView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: UIHelper().drawAppbarTitle(title: "Search History"),
+        title: UIHelper().drawAppbarTitle(title: "Browse Info"),
       ),
       body: Column(
         children: [
@@ -95,7 +94,7 @@ class _SearchHistoryViewState extends State<SearchHistoryView> {
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: SemesterButton(
                         onTab: () {
-                          Get.to(()=> SearchHistoryWidget(studentId: studentId));
+                          Get.to(()=>BrowseInfoWidget(studentId: studentId));
                         },
                         text: studentId,
                         isCenter: false,
@@ -111,53 +110,3 @@ class _SearchHistoryViewState extends State<SearchHistoryView> {
     );
   }
 }
-
-// class SearchHistoryView extends StatelessWidget {
-//   const SearchHistoryView({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: UIHelper().drawAppbarTitle(title: "Search History"),
-//       ),
-//       body: StreamBuilder<QuerySnapshot>(
-//         // Fetch data from the 'user' collection
-//         stream: FirebaseFirestore.instance.collection('user').snapshots(),
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           }
-//
-//           if (snapshot.hasError) {
-//             return Center(child: Text('Error: ${snapshot.error}'));
-//           }
-//
-//           if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-//             return const Center(child: Text('No data found.'));
-//           }
-//
-//           final userDocs = snapshot.data!.docs;
-//
-//           return ListView.builder(
-//             itemCount: userDocs.length,
-//             itemBuilder: (context, index) {
-//               final userData = userDocs[index].data() as Map<String, dynamic>;
-//               final studentId = userData['studentId'] ?? 'No Student ID';
-//               final isAdmin = userData['isAdmin'] ?? false;
-//
-//               return !isAdmin ? Padding(
-//                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
-//                 child: SemesterButton(
-//                   onTab: (){},
-//                  text: studentId,
-//                   isCenter: false,
-//                 ),
-//               ) : SizedBox();
-//             },
-//           );
-//         },
-//       ),
-//     );
-//   }
-// }

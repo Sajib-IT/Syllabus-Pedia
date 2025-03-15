@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
-import 'package:syllabus_pedia/view/model/search_history_model.dart';
+import 'package:syllabus_pedia/view/admin/browse_info/widget/format.dart';
+import 'package:syllabus_pedia/view/model/browse_time_model.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart'; // For date formatting
 
-class SearchHistoryWidget extends StatelessWidget {
-   final String studentId;
-  const SearchHistoryWidget({super.key, required this.studentId});
+class BrowseInfoWidget extends StatelessWidget {
+  final String studentId;
+  const BrowseInfoWidget({super.key, required this.studentId});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: UIHelper().drawAppbarTitle(title: "Search History - $studentId"),
+        title: UIHelper().drawAppbarTitle(title: "Browse Info - $studentId"),
       ),
       body: SingleChildScrollView(
         child: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance
               .collection('info')
-              .doc(studentId) // Replace with actual studentId or dynamic value
-              .collection('searchHistory')
+              .doc(studentId)
+              .collection('browseTime')
               .orderBy("timeStamp", descending: true)
               .snapshots(),
           builder: (context, snapshot) {
@@ -32,15 +33,15 @@ class SearchHistoryWidget extends StatelessWidget {
             }
 
             if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-              return const Center(child: Text("No Search History found"));
+              return const Center(child: Text("No Browse History found"));
             }
 
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
               child: Column(
                 children: snapshot.data!.docs.map((doc) {
-                  SearchHistoryModel searchHistory = SearchHistoryModel.fromJson(doc.data() as Map<String, dynamic>);
-                  return searchHistoryContainer(searchHistory: searchHistory);
+                  BrowseTimeModel browseTime = BrowseTimeModel.fromJson(doc.data() as Map<String, dynamic>);
+                  return browseInfoContainer(browseTime: browseTime);
                 }).toList(),
               ),
             );
@@ -50,9 +51,9 @@ class SearchHistoryWidget extends StatelessWidget {
     );
   }
 
-  Widget searchHistoryContainer({required SearchHistoryModel searchHistory}) {
-    String formattedDate = DateFormat('dd-MMM-yyyy\nh:mm a')
-        .format(searchHistory.timestamp.toDate());
+  Widget browseInfoContainer({required BrowseTimeModel browseTime}) {
+    String formattedDate =
+    DateFormat('dd-MMM-yyyy').format(browseTime.timeStamp.toDate());
 
     return Container(
       padding: const EdgeInsets.all(12),
@@ -76,15 +77,16 @@ class SearchHistoryWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text("Student ID: ${searchHistory.studentId}",
+              Text("Student ID: ${browseTime.studentId}",
                   style: const TextStyle(fontWeight: FontWeight.bold)),
               const Spacer(),
               Text(formattedDate, style: const TextStyle(color: Colors.grey)),
             ],
           ),
           const SizedBox(height: 8),
-          Text("Search Query:\n${searchHistory.historyText}",
-              style: const TextStyle(fontSize: 16)),
+          Text("Total Browse Time:",style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500)),
+          Text(Format().formatTimeHumanReadable(browseTime.totalTime),
+              style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w400)),
         ],
       ),
     );

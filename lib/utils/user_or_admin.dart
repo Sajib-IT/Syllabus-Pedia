@@ -8,10 +8,12 @@ class UserOrAdmin {
   UserOrAdmin._internal();
 
   bool _isAdmin = false;
+  String _studentId = '';
 
   bool get isAdmin => _isAdmin;
+  String get studentId => _studentId;
 
-  /// Fetch user role from Firestore
+  /// Fetch user role and studentId from Firestore
   Future<void> init() async {
     User? user = FirebaseAuth.instance.currentUser;
     if (user != null) {
@@ -22,12 +24,13 @@ class UserOrAdmin {
 
       if (userDoc.exists) {
         _isAdmin = userDoc['isAdmin'] ?? false;
+        _studentId = userDoc['studentId'] ?? '';
       }
     }
   }
 
-  /// Refresh the admin status (if needed)
-  Future<void> refreshAdminStatus() async {
+  /// Refresh the admin status and studentId (if needed)
+  Future<void> refreshUserData() async {
     await init();
   }
 }

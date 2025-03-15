@@ -18,17 +18,7 @@ class SemesterNameView extends StatelessWidget {
         title: Padding(
             padding: const EdgeInsets.only(left: 16.0),
             child: UIHelper().drawAppbarTitle(title: "Semester Name List")),
-        // actions: [
-        //   Padding(
-        //     padding: const EdgeInsets.only(right: 16.0),
-        //     child: GestureDetector(
-        //       onTap: () {
-        //         FirebaseAuth.instance.signOut();
-        //       },
-        //       child: const Icon(Icons.logout),
-        //     ),
-        //   )
-        // ],
+
       ),
       drawer: DrawerView(),
       body: SingleChildScrollView(
