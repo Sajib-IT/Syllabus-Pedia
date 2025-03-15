@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class SemesterButton extends StatelessWidget {
   final String text;
+  final bool isCenter;
   final FontWeight? fontWeight;
   final VoidCallback? onTab;
   const SemesterButton(
-      {super.key, required this.text, this.onTab, this.fontWeight});
+      {super.key, required this.text, this.onTab, this.fontWeight, this.isCenter = true});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class SemesterButton extends StatelessWidget {
           ),
           child: Text(
             text,
-            textAlign: TextAlign.center,
+            textAlign: isCenter ?TextAlign.center : TextAlign.start,
             style: TextStyle(
               fontSize: 17,
               fontWeight: fontWeight ?? FontWeight.w500,
