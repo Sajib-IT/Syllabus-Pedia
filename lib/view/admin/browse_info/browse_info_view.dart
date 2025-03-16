@@ -53,7 +53,7 @@ class _BrowseInfoViewState extends State<BrowseInfoView> {
           // StreamBuilder to fetch and display data
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
-              stream: FirebaseFirestore.instance.collection('user').snapshots(),
+              stream: FirebaseFirestore.instance.collection('user').orderBy("studentId").snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
