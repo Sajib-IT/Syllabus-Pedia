@@ -102,6 +102,7 @@ class SemesterNameController extends GetxController
       final int currentTotalTime = docSnapshot['totalTime'];
       await browseTimeDoc.update({
         'totalTime': currentTotalTime + timeInSeconds,
+        'id': currentDate,
         'timeStamp': Timestamp.fromDate(DateTime.now()),
         'studentId':
             UserOrAdmin().studentId, // Ensure studentId is always updated
@@ -110,6 +111,7 @@ class SemesterNameController extends GetxController
       // Create new document
       await browseTimeDoc.set({
         'totalTime': timeInSeconds,
+        'id': currentDate,
         'timeStamp': Timestamp.fromDate(DateTime.now()),
         'studentId': UserOrAdmin().studentId,
       });

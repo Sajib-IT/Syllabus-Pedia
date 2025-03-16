@@ -13,6 +13,7 @@ String searchHistoryModelToJson(SearchHistoryModel data) => json.encode(data.toJ
 
 class SearchHistoryModel {
   // final String userId;
+  final String id;
   final String studentId;
   final String historyText;
   final Timestamp timestamp;
@@ -20,6 +21,7 @@ class SearchHistoryModel {
 
   SearchHistoryModel({
     // required this.userId,
+    required this.id,
     required this.studentId,
     required this.historyText,
     required this.timestamp,
@@ -28,6 +30,7 @@ class SearchHistoryModel {
 
   factory SearchHistoryModel.fromJson(Map<String, dynamic> json) => SearchHistoryModel(
     // userId: json["userId"],
+    id: json["id"],
     studentId: json["studentId"],
     historyText: json["historyText"],
     timestamp: json["timeStamp"],
@@ -36,6 +39,7 @@ class SearchHistoryModel {
 
   Map<String, dynamic> toJson() => {
     // "userId": userId,
+    "id": id,
     "studentId": studentId,
     "historyText": historyText,
     "timeStamp": timestamp,

@@ -19,6 +19,10 @@ class AiGeneratedTextController extends GetxController {
       print(selectedText);
     }
     aiGeneratedText();
+    if(!UserOrAdmin().isAdmin){
+      saveSearchHistory(UserOrAdmin().studentId, selectedText);
+    }
+
     // getStudentIdData();
     super.onInit();
   }
@@ -64,18 +68,20 @@ class AiGeneratedTextController extends GetxController {
     try {
       // Reference to Firestore
       final firestore = FirebaseFirestore.instance;
+      String randomDoc = DateTime.now().millisecondsSinceEpoch.toString();
       searchHistoryModel = SearchHistoryModel(
+        id: randomDoc,
           studentId: studentId,
           historyText: historyText,
           timestamp: Timestamp.now());
       // Reference to the student's search history subcollection
       CollectionReference searchHistoryRef = firestore
           .collection('info')
-          .doc(UserOrAdmin().studentId)
+          .doc(studentId)
           .collection('searchHistory');
       Map<String, dynamic> searchHistoryModelJson = searchHistoryModel.toJson();
-      // Create a new document with timestamp
-      await searchHistoryRef.add(searchHistoryModelJson);
+      // Create a new document with timestamps
+      await searchHistoryRef.doc(randomDoc).set(searchHistoryModelJson);
 
       print("Search history saved successfully");
     } catch (e) {

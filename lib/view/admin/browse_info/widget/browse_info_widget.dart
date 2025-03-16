@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
+import 'package:syllabus_pedia/config/firebase_manager.dart';
 import 'package:syllabus_pedia/view/admin/browse_info/widget/format.dart';
 import 'package:syllabus_pedia/view/model/browse_time_model.dart';
+import 'package:syllabus_pedia/widgets/dialog/confirmation_dialog.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart'; // For date formatting
 
 class BrowseInfoWidget extends StatelessWidget {
@@ -55,40 +57,61 @@ class BrowseInfoWidget extends StatelessWidget {
     String formattedDate =
     DateFormat('dd-MMM-yyyy').format(browseTime.timeStamp.toDate());
 
-    return Container(
-      padding: const EdgeInsets.all(12),
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.blue, width: 1.5),
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            blurRadius: 4,
-            spreadRadius: 2,
-            offset: const Offset(0, 2),
-          ),
-        ],
+    return Stack(children: [
+      Container(
+        padding: const EdgeInsets.all(12),
+        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.blue, width: 1.5),
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              blurRadius: 4,
+              spreadRadius: 2,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text("Student ID: ${browseTime.studentId}",
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                const Spacer(),
+                Text(formattedDate, style: const TextStyle(color: Colors.grey)),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text("Total Browse Time:",style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500)),
+            Text(Format().formatTimeHumanReadable(browseTime.totalTime),
+                style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w400)),
+          ],
+        ),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text("Student ID: ${browseTime.studentId}",
-                  style: const TextStyle(fontWeight: FontWeight.bold)),
-              const Spacer(),
-              Text(formattedDate, style: const TextStyle(color: Colors.grey)),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Text("Total Browse Time:",style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w500)),
-          Text(Format().formatTimeHumanReadable(browseTime.totalTime),
-              style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w400)),
-        ],
-      ),
-    );
+      Positioned(
+          bottom: 0,
+          right: 8,
+          child: IconButton(
+              onPressed: () {
+                ConfirmationDialog().showDelete(function: () {
+                  FirebaseManager().deleteSubDocument(
+                      subCollectionName: "browseTime",
+                      studentId: browseTime.studentId,
+                      searchHistoryDocId: browseTime.id);
+                });
+              },
+              splashRadius: 16,
+              icon: Icon(
+                Icons.delete,
+                color: Colors.red,
+                size: 25,
+              ))),
+    ]);
+
   }
 }
