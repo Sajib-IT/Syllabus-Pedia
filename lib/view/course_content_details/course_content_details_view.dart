@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/utils/user_or_admin.dart';
 import 'package:syllabus_pedia/view/ai_generated_text/ai_generated_text_view.dart';
 import 'package:syllabus_pedia/view/course_content_details/course_content_details_controller.dart';
 import 'package:syllabus_pedia/view/course_content_details/widget/course_content_details_widget.dart';
+import 'package:syllabus_pedia/widgets/dialog/syllabus_dialog.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
 class CourseContentDetailsView extends StatelessWidget {
@@ -16,7 +18,6 @@ class CourseContentDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // title: UIHelper().drawAppbarTitle(title: "Course Content Details")),
           title: UIHelper().drawAppbarTitle(title: appTittle)),
       // floatingActionButton: Container(
       //   width: 50,
@@ -38,6 +39,19 @@ class CourseContentDetailsView extends StatelessWidget {
       //     },
       //   ),
       // ),
+      floatingActionButton: UserOrAdmin().isAdmin
+          ? FloatingActionButton(
+        onPressed: () {
+          SyllabusDialog().showAddCourseContentsDialog(
+              titleController: _controller.titleController,
+              subtitleController: _controller.subtitleController,
+              onTab: _controller.addCourseWithContents);
+        },
+        backgroundColor: Colors.blue,
+        tooltip: "Add Course Contents",
+        child: Icon(Icons.add),
+      )
+          : null,
       body: Column(
         children: [
           // Padding(

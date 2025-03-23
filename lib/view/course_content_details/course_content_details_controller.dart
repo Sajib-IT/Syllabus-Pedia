@@ -3,28 +3,46 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_multi_select_items/flutter_multi_select_items.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/config/firebase_manager.dart';
 import 'package:syllabus_pedia/utils/app_string.dart';
 import 'package:syllabus_pedia/view/ai_generated_text/ai_generated_text_view.dart';
+import 'package:syllabus_pedia/view/model/content_model.dart';
 import 'package:syllabus_pedia/widgets/dialog/alert_custom_dialog.dart';
 import 'package:syllabus_pedia/widgets/dialog/customiseable_base_dialog.dart';
 
 class CourseContentDetailsController extends GetxController {
   List<Map<String, String>> allCourseContentDetailsList = [];
+  final titleController = TextEditingController();
+  final subtitleController = TextEditingController();
   final searchController = TextEditingController();
+  late ContentModel contentModel;
   String courseName = "";
+  String semesterName = "";
   RxString selectedText = RxString("");
   RxList modifiedText = RxList([]);
   final MultiSelectController _selectController = MultiSelectController();
   @override
   void onInit() {
     if (Get.arguments != null) {
-      courseName = Get.arguments;
+      courseName = Get.arguments[0];
+      semesterName = Get.arguments[1];
       if (kDebugMode) {
         print(courseName);
       }
       initializeCourseContentDetailsList();
     }
     super.onInit();
+  }
+
+  void addCourseWithContents() async {
+    String contentId = DateTime.now().millisecondsSinceEpoch.toString();
+    contentModel = ContentModel(
+        contentId: contentId,
+        title: titleController.text,
+        subtitle: subtitleController.text,
+        courseName: courseName,
+        semesterName: semesterName);
+    FirebaseManager().addCourseWithContents(contentModel: contentModel);
   }
 
   void showCustomDialog(List<String> content) {
@@ -107,14 +125,14 @@ class CourseContentDetailsController extends GetxController {
                 const Spacer(),
                 FilledButton(
                     onPressed: () {
-                      if(modifiedText.isNotEmpty){
+                      if (modifiedText.isNotEmpty) {
                         Get.back();
                         Get.to(() => AiGeneratedTextView(),
                             arguments: modifiedText.toString());
-                      }else{
-                        AlertCustomDialogs().showAlert(msg: "Please Select At least One Topic");
+                      } else {
+                        AlertCustomDialogs()
+                            .showAlert(msg: "Please Select At least One Topic");
                       }
-
                     },
                     child: const Text("Go"))
               ],

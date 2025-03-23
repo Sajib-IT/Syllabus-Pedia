@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/utils/user_or_admin.dart';
 import 'package:syllabus_pedia/view/course_name/course_name_controller.dart';
 import 'package:syllabus_pedia/view/course_name/widget/course_name_widget.dart';
+import 'package:syllabus_pedia/widgets/dialog/syllabus_dialog.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
 
 class CourseNameView extends StatelessWidget {
@@ -14,11 +16,25 @@ class CourseNameView extends StatelessWidget {
       appBar: AppBar(
         title: UIHelper().drawAppbarTitle(title: "Course Name List"),
       ),
-      body: Column(
-        children: List.generate(
-            _controller.allCourseNameList.length,
-            (index) => CourseNameWidget(
-                courseNameList: _controller.allCourseNameList[index])),
+      floatingActionButton: UserOrAdmin().isAdmin
+          ? FloatingActionButton(
+              onPressed: () {
+                SyllabusDialog().showAddCourseDialog(
+                    courseController: _controller.courseNameController,
+                    onTab: _controller.addCourse);
+              },
+              backgroundColor: Colors.blue,
+              tooltip: "Add Course",
+              child: Icon(Icons.add),
+            )
+          : null,
+      body: SingleChildScrollView(
+        child: Column(
+          children: List.generate(
+              _controller.allCourseNameList.length,
+              (index) => CourseNameWidget(
+                  courseNameList: _controller.allCourseNameList[index])),
+        ),
       ),
     );
   }
