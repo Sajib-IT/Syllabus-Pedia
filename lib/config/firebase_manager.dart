@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -52,7 +53,7 @@ class FirebaseManager {
     try {
       await firestore
           .collection(courseModel.semesterName)
-          .doc(courseModel.courseName)
+          .doc(courseModel.courseId)
           .set(courseModelJson);
     } on FirebaseException catch (e) {
       log(e.code);
@@ -67,7 +68,7 @@ class FirebaseManager {
     try {
       await firestore
           .collection(contentModel.semesterName)
-          .doc(contentModel.courseName)
+          .doc(contentModel.courseId)
           .collection("courseContents")
           .doc(contentModel.contentId)
           .set(contentModelJson);
@@ -75,5 +76,56 @@ class FirebaseManager {
       log(e.code);
       EasyLoading.dismiss();
     }
+  }
+
+  void updateCourse(CourseModel courseModel, String updatedCourse) async {
+    await firestore
+        .collection(courseModel.semesterName) // Collection name
+        .doc(courseModel.courseId) // Document ID
+        .update({
+          'courseName': updatedCourse,
+        })
+        .then((_) => print("Course Updated"))
+        .catchError((error) => print("Error updating document: $error"));
+  }
+
+  void updateContent(
+      ContentModel contentModel, String title, String subtitle) async {
+    await firestore
+        .collection(contentModel.semesterName) // Collection name
+        .doc(contentModel.courseId)
+        .collection("courseContents")
+        .doc(contentModel.contentId) // Document ID
+        .update({
+          'title': title,
+          'subtitle': subtitle,
+        })
+        .then((_) => print("Course Updated"))
+        .catchError((error) => print("Error updating document: $error"));
+  }
+
+  void deleteContent(ContentModel contentModel) async {
+    await firestore
+        .collection(contentModel.semesterName) // Collection name
+        .doc(contentModel.courseId)
+        .collection("courseContents")
+        .doc(contentModel.contentId) // Document ID
+        .delete()
+        .then((_) => print("Course Deleted"))
+        .catchError((error) => print("Error deleting document: $error"));
+  }
+
+  void deleteCourse(CourseModel courseModel) async {
+    DocumentReference docRef = firestore
+        .collection(courseModel.semesterName)
+        .doc(courseModel.courseId);
+
+    // Delete the document
+    await docRef.delete().then((_) {
+      print('Document with ID ${courseModel.courseName} deleted successfully');
+    }).catchError((error) {
+      print(
+          'Failed to delete document with ID ${courseModel.courseName}: $error');
+    });
   }
 }

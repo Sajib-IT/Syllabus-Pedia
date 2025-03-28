@@ -18,6 +18,7 @@ class CourseContentDetailsController extends GetxController {
   late ContentModel contentModel;
   String courseName = "";
   String semesterName = "";
+  String courseId = "";
   RxString selectedText = RxString("");
   RxList modifiedText = RxList([]);
   final MultiSelectController _selectController = MultiSelectController();
@@ -26,6 +27,7 @@ class CourseContentDetailsController extends GetxController {
     if (Get.arguments != null) {
       courseName = Get.arguments[0];
       semesterName = Get.arguments[1];
+      courseId = Get.arguments[2];
       if (kDebugMode) {
         print(courseName);
       }
@@ -41,7 +43,7 @@ class CourseContentDetailsController extends GetxController {
         title: titleController.text,
         subtitle: subtitleController.text,
         courseName: courseName,
-        semesterName: semesterName);
+        semesterName: semesterName, courseId: courseId);
     FirebaseManager().addCourseWithContents(contentModel: contentModel);
   }
 

@@ -11,7 +11,8 @@ class CourseContentDetailsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
         children: courseContentDetails.entries.map((entry) {
-      return ElementDetailsWidget(element: entry);
+          return SizedBox();
+      // return ElementDetailsWidget(element: entry);
     }).toList());
   }
 }

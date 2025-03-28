@@ -24,12 +24,14 @@ class CourseNameController extends GetxController {
     allCourseNameList = AppString.allCourseNameList(semesterName);
   }
 
-  void addCourse() async{
+  void addCourse() async {
+    String courseId = DateTime.now().millisecondsSinceEpoch.toString();
     courseModel = CourseModel(
-        semesterName: semesterName, courseName: courseNameController.text);
+        semesterName: semesterName,
+        courseName: courseNameController.text,
+        courseId: courseId);
     EasyLoading.show(status: "Loading...");
-   await FirebaseManager()
-        .addCourse(courseModel: courseModel);
+    await FirebaseManager().addCourse(courseModel: courseModel);
     EasyLoading.dismiss();
   }
 }

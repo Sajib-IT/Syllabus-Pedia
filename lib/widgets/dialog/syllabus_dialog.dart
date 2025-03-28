@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/view/model/content_model.dart';
 import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
 import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
 import 'package:syllabus_pedia/widgets/ui_helper/ui_helper.dart';
@@ -47,7 +48,13 @@ class SyllabusDialog {
   void showAddCourseContentsDialog(
       {required TextEditingController titleController,
       required TextEditingController subtitleController,
-      required VoidCallback onTab}) {
+      required VoidCallback onTab,
+      bool isEdit = false,
+      ContentModel? contentModel}) {
+    if (isEdit) {
+      titleController.text = contentModel!.title;
+      subtitleController.text = contentModel.subtitle;
+    }
     Get.defaultDialog(
       title: "Add Course Contents",
       content: Padding(
@@ -63,6 +70,7 @@ class SyllabusDialog {
             UIHelper().columTitleWithWidget(
                 title: "Course Content Subtitle",
                 widget: MyTextField(
+                  maxLine: 4,
                   textEditingController: subtitleController,
                   hintText: "Enter Course Content details",
                 )),
@@ -72,7 +80,7 @@ class SyllabusDialog {
       confirm: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: CustomElevatedButton(
-          text: "Add",
+          text: isEdit ? "Update" : "Add",
           onPressed: () {
             onTab();
             Get.back();

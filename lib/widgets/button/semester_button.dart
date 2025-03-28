@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:syllabus_pedia/config/firebase_manager.dart';
+import 'package:syllabus_pedia/view/model/content_model.dart';
+import 'package:syllabus_pedia/view/model/course_model.dart';
+import 'package:syllabus_pedia/widgets/button/custom_elevated_button.dart';
+import 'package:syllabus_pedia/widgets/dialog/confirmation_dialog.dart';
+import 'package:syllabus_pedia/widgets/input/my_textfield.dart';
 
 class SemesterButton extends StatelessWidget {
   final String text;
+  final CourseModel? courseModel;
   final bool isCenter;
   final FontWeight? fontWeight;
   final VoidCallback? onTab;
-  final VoidCallback? onEdit;
+  // final Function(CourseModel courseModel)? onEdit;
   final VoidCallback? onDelete;
 
   const SemesterButton({
     super.key,
     required this.text,
     this.onTab,
-    this.onEdit,
+    this.courseModel,
+    // this.onEdit,
     this.onDelete,
     this.fontWeight,
     this.isCenter = true,
@@ -28,8 +36,8 @@ class SemesterButton extends StatelessWidget {
         child: Stack(children: [
           Container(
             padding: EdgeInsets.symmetric(
-                horizontal: onEdit != null ? 16.0 : 16,
-                vertical: onEdit != null ? 16.0 : 16),
+                horizontal: courseModel != null ? 16.0 : 16,
+                vertical: courseModel != null ? 16.0 : 16),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blueAccent.shade100),
               borderRadius: BorderRadius.circular(8),
@@ -52,15 +60,15 @@ class SemesterButton extends StatelessWidget {
               ],
             ),
           ),
-          if (onEdit != null)
+          if (courseModel != null)
             Positioned(
               bottom: 10,
               right: 0,
-              child:  IconButton(
+              child: IconButton(
                 visualDensity: VisualDensity.compact,
-                icon: Icon(Icons.more_vert,size: 28, color: Colors.black),
-                onPressed: (){
-                  showEditDeletePopup( onEdit!, onDelete!);
+                icon: Icon(Icons.more_vert, size: 28, color: Colors.black),
+                onPressed: () {
+                  showEditDeletePopup(courseModel!, onDelete!);
                 },
               ),
               // child: Row(
@@ -85,8 +93,7 @@ class SemesterButton extends StatelessWidget {
   }
 }
 
-
-void showEditDeletePopup(Function() onEdit, Function() onDelete) {
+void showEditDeletePopup(CourseModel courseModel, Function() onDelete) {
   Get.bottomSheet(
     Container(
       padding: const EdgeInsets.all(16),
@@ -102,7 +109,7 @@ void showEditDeletePopup(Function() onEdit, Function() onDelete) {
             title: Text("Edit"),
             onTap: () {
               Get.back();
-              showEditPopup( onEdit);// Close the popup
+              showEditPopup(courseModel); // Close the popup
               // onEdit(); // Call the edit function
             },
           ),
@@ -110,7 +117,10 @@ void showEditDeletePopup(Function() onEdit, Function() onDelete) {
             leading: Icon(Icons.delete, color: Colors.red),
             title: Text("Delete"),
             onTap: () {
-              Get.back(); // Close the popup
+              Get.back();
+              ConfirmationDialog().showDelete(function: () {
+                FirebaseManager().deleteCourse(courseModel);
+              });
               onDelete(); // Call the delete function
             },
           ),
@@ -121,32 +131,34 @@ void showEditDeletePopup(Function() onEdit, Function() onDelete) {
   );
 }
 
-void showEditPopup( Function() onEdit) {
+void showEditPopup(CourseModel courseModel) {
   TextEditingController textController = TextEditingController();
-
+  textController.text = courseModel.courseName;
   Get.dialog(
     AlertDialog(
-      title: Text("Edit Item"),
-      content: TextField(
-        controller: textController,
-        decoration: InputDecoration(
-          hintText: "Enter new value",
-          border: OutlineInputBorder(),
-        ),
+      title: Text("Update Course"),
+      content: MyTextField(
+        textEditingController: textController,
+        hintText: "Enter updated course name value",
       ),
       actions: [
-        TextButton(
-          onPressed: () => Get.back(), // Close popup
-          child: Text("Cancel"),
+        CustomElevatedButton(
+          text: "Cancel",
+          backgroundColor: Colors.white,
+          textColor: Colors.red,
+          borderColor: Colors.red,
+          onPressed: () => Get.back(),
         ),
-        ElevatedButton(
+        SizedBox(height: 8),
+        CustomElevatedButton(
+          text: "Update",
           onPressed: () {
-            // if (textController.text.isNotEmpty) {
-            //   onEdit(); // Pass new value
-            //   Get.back(); // Close popup
-            // }
+            if (textController.text.isNotEmpty) {
+              FirebaseManager().updateCourse(courseModel, textController.text);
+              // Pass new value
+              Get.back(); // Close popup
+            }
           },
-          child: Text("Save"),
         ),
       ],
     ),

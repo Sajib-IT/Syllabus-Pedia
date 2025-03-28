@@ -27,7 +27,6 @@ class CourseNameWidget extends StatelessWidget {
                         _courseNameController.semesterName
                       ]);
                 },
-                onEdit: () {},
                 onDelete: () {},
               )),
     );
