@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syllabus_pedia/utils/user_or_admin.dart';
+import 'package:syllabus_pedia/view/admin/admin_activity/admin_activity_view.dart';
 import 'package:syllabus_pedia/view/admin/browse_info/browse_info_view.dart';
 import 'package:syllabus_pedia/view/admin/search_history/search_history_view.dart';
 import 'package:syllabus_pedia/view/feedback/admin_feedback.dart';
@@ -44,7 +45,7 @@ class DrawerView extends StatelessWidget {
           // Drawer Items
           if(UserOrAdmin().isAdmin)
             ListTile(
-              leading: const Icon(Icons.person, color: Colors.blueAccent),
+              leading: const Icon(Icons.history, color: Colors.blueAccent),
               title: const Text(
                 "Search History",
                 style: TextStyle(fontSize: 16),
@@ -56,7 +57,7 @@ class DrawerView extends StatelessWidget {
             ),
           if(UserOrAdmin().isAdmin)
             ListTile(
-              leading: const Icon(Icons.person, color: Colors.blueAccent),
+              leading: const Icon(Icons.feedback, color: Colors.blueAccent),
               title: const Text(
                 "Feedback",
                 style: TextStyle(fontSize: 16),
@@ -68,7 +69,7 @@ class DrawerView extends StatelessWidget {
             ),
           if(UserOrAdmin().isAdmin)
             ListTile(
-              leading: const Icon(Icons.person, color: Colors.blueAccent),
+              leading: const Icon(Icons.info, color: Colors.blueAccent),
               title: const Text(
                 "Browse Info",
                 style: TextStyle(fontSize: 16),
@@ -76,6 +77,18 @@ class DrawerView extends StatelessWidget {
               onTap: () {
                 Get.back();
                 Get.to(() => BrowseInfoView());
+              },
+            ),
+          if(UserOrAdmin().isAdmin)
+            ListTile(
+              leading: const Icon(Icons.work, color: Colors.blueAccent),
+              title: const Text(
+                "Admin Activity",
+                style: TextStyle(fontSize: 16),
+              ),
+              onTap: () {
+                Get.back();
+                Get.to(() => AdminActivityView());
               },
             ),
           if(!UserOrAdmin().isAdmin)

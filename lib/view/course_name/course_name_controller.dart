@@ -32,6 +32,11 @@ class CourseNameController extends GetxController {
         courseId: courseId);
     EasyLoading.show(status: "Loading...");
     await FirebaseManager().addCourse(courseModel: courseModel);
+    FirebaseManager().addAdminActivity(
+      activityName: "Add course",
+      semesterName: semesterName,
+      topic: courseModel.courseName,
+    );
     EasyLoading.dismiss();
   }
 }

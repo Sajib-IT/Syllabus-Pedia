@@ -45,6 +45,12 @@ class CourseContentDetailsController extends GetxController {
         courseName: courseName,
         semesterName: semesterName, courseId: courseId);
     FirebaseManager().addCourseWithContents(contentModel: contentModel);
+    FirebaseManager().addAdminActivity(
+      activityName: "Add content",
+      semesterName: semesterName,
+      courseName: contentModel.courseName,
+      topic: "contents added",
+    );
   }
 
   void showCustomDialog(List<String> content) {
