@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:syllabus_pedia/config/firebase_manager.dart';
 import 'package:syllabus_pedia/utils/user_or_admin.dart';
 import 'package:syllabus_pedia/view/course_content_details/course_content_details_view.dart';
 import 'package:syllabus_pedia/view/course_name/course_name_controller.dart';
-import 'package:syllabus_pedia/view/course_name/widget/course_name_widget.dart';
 import 'package:syllabus_pedia/view/model/course_model.dart';
 import 'package:syllabus_pedia/widgets/button/semester_button.dart';
 import 'package:syllabus_pedia/widgets/dialog/syllabus_dialog.dart';
